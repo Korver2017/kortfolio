@@ -4,3 +4,25 @@
 @import "nav.scss";
 @import "resume-item.scss";
 @import "bootstrap-overrides.scss";
+
+body {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.email {
+  font-size: 1.5rem;
+}
+
+.bodyShow {
+  opacity: 1;
+}
+
+nav {
+  transform: translateX(-50vw);
+  transition: transform 1.5s;
+}
+
+.navShow {
+  transform: translateX(0);
+}

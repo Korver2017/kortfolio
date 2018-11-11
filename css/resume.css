@@ -190,3 +190,31 @@ a {
 a:hover, a:focus, a:active {
   color: #824027;
 }
+
+body {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.email {
+  font-size: 1.5rem;
+}
+
+.bodyShow {
+  opacity: 1;
+}
+
+nav {
+  -webkit-transform: translateX(-50vw);
+  transform: translateX(-50vw);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+.navShow {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
