@@ -26,3 +26,10 @@ nav {
 .navShow {
   transform: translateX(0);
 }
+
+.social-icons a {
+  transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
+  &:hover {
+    transform: scale(1.3);
+  }
+}
