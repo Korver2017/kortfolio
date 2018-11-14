@@ -7,19 +7,93 @@
 
 body {
   opacity: 0;
-  transition: opacity 1s;
+  transition: all 1s;
+  overflow-x: hidden;
+}
+
+body.nightMode {
+  background-color: #44423F;
+  h1 {
+    color: #00cc99;
+  }
+  .toggleButton {
+    background-color: #00151f;
+    border-color: #fff;
+    &:before {
+      background-color: #fff;
+    }
+  }
 }
 
 h1 {
   opacity: 0;
 }
 
+.toggleButton {
+  position: fixed;
+  top: 40px;
+  right: 50px;
+  background-color: #fff;
+  border: 2px solid #00151f;
+  width: 45px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: .5s;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #00151f;
+    border-radius: 50%;
+    transition: .5s;
+  }
+}
+
+// .toggleButton:before {
+//   content: '';
+//   position: absolute;
+//   top: 1px;
+//   left: 2px;
+//   width: 14px;
+//   height: 14px;
+//   background-color: #00151f;
+//   border-radius: 50%;
+//   transition: .5s;
+// }
+
+.toggleButton.active:before {
+  left: 25px;
+}
+
 .email {
   font-size: 1.5rem;
+  opacity: 0;
 }
 
 .show {
   opacity: 1;
+}
+
+#sideNav {
+  height: 140vh;
+  top: -10vh;
+  left: -1.5vw;
+}
+
+.navbarContent {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 17rem;
+  height: 100vh;
+  transform: rotate(3deg);
 }
 
 nav {
@@ -28,7 +102,7 @@ nav {
 }
 
 .navShow {
-  transform: translateX(0);
+  transform: translateX(0) rotate(-3deg);
 }
 
 .social-icons a {
