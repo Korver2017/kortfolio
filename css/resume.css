@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #BD5D38;
+  background-color: #3066be;
 }
 
 .dev-icons {
@@ -80,7 +80,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
+  color: #3066be;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -90,7 +90,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: #638fd8;
 }
 
 @media (min-width: 992px) {
@@ -176,19 +176,19 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #BD5D38 !important;
+  background-color: #3066be !important;
 }
 
 .text-primary {
-  color: #BD5D38 !important;
+  color: #3066be !important;
 }
 
 a {
-  color: #BD5D38;
+  color: #3066be;
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: #214581;
 }
 
 body {
@@ -203,7 +203,11 @@ body.nightMode {
 }
 
 body.nightMode h1 {
-  color: #00cc99;
+  color: #98C8B2 !important;
+}
+
+body.nightMode h1 span {
+  color: #95A1A8 !important;
 }
 
 body.nightMode .toggleButton {
@@ -215,8 +219,45 @@ body.nightMode .toggleButton:before {
   background-color: #fff;
 }
 
+body.nightMode #sideNav {
+  background-color: #95a1a8 !important;
+}
+
+body.nightMode .card {
+  background-color: #52504D;
+}
+
+body.nightMode .card h4 {
+  color: #95A1A8;
+}
+
+body.nightMode .customCard {
+  background: #52504D;
+}
+
+body.nightMode .customCard h4 {
+  color: #95A1A8;
+}
+
+body.nightMode .customCard p {
+  color: #95A1A8;
+}
+
+body.nightMode .customCard:hover {
+  -webkit-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+}
+
 h1 {
   opacity: 0;
+}
+
+h2 {
+  color: #119da4;
+}
+
+h3 {
+  color: #6d9dc5;
 }
 
 .toggleButton {
