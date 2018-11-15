@@ -63,7 +63,7 @@ $(document).ready(function () {
       $card.filter(':last-child').css('opacity', 1).addClass('animated bounceInRight');
 
       setTimeout(function () {
-        $card.filter(':nth-child(2)').css('opacity', 1).addClass('animated jello');
+        $card.filter(':nth-child(2)').css('opacity', 1).addClass('animated bounceIn');
       }, 1000);
     }
 
