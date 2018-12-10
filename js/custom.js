@@ -64,7 +64,7 @@ $(document).ready(function () {
 
       setTimeout(function () {
         $card.filter(':nth-child(2)').css('opacity', 1).addClass('animated bounceIn');
-      }, 1000);
+      }, 800);
     }
 
     if ($window.scrollTop() > ($('#contact').offset().top) - $('#contact').outerHeight() / 3) {
