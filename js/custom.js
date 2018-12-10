@@ -7,7 +7,7 @@ $(document).ready(function () {
   });
 
   $('body').addClass('show');
-  $('nav').addClass('navShow');
+  $('#sideNav').addClass('navShow');
   if ($window.scrollTop() < $('#cover').outerHeight() / 4) {
     setTimeout(function () {
       $('h1, .email').addClass('show animated jackInTheBox show');
