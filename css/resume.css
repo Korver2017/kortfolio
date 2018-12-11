@@ -308,9 +308,11 @@ h3 {
 }
 
 #sideNav {
+  -webkit-transition: left 1s;
+  transition: left 1s;
   height: 140vh;
   top: -10vh;
-  left: -1.5vw;
+  left: -40vw;
 }
 
 .navbarContent {
@@ -333,12 +335,9 @@ h3 {
 
 nav {
   padding: relative;
-  -webkit-transform: translateX(-50vw) rotate(-3deg);
-  transform: translateX(-50vw) rotate(-3deg);
-  -webkit-transition: -webkit-transform 1.5s;
-  transition: -webkit-transform 1.5s;
-  transition: transform 1.5s;
-  transition: transform 1.5s, -webkit-transform 1.5s;
+  left: -10vw;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
 
 nav:before {
@@ -350,9 +349,8 @@ nav:before {
   background-color: #3066be;
 }
 
-.navShow {
-  -webkit-transform: translateX(0) rotate(-3deg);
-  transform: translateX(0) rotate(-3deg);
+#sideNav.navShow {
+  left: -1.5vw;
 }
 
 .social-icons a {

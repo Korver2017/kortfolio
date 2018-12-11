@@ -7,11 +7,15 @@ $(document).ready(function () {
   });
 
   $('body').addClass('show');
-  $('#sideNav').addClass('navShow');
+
+  setTimeout(function() {
+    $('#sideNav').addClass('navShow');
+  }, 1500);
+  
   if ($window.scrollTop() < $('#cover').outerHeight() / 4) {
     setTimeout(function () {
-      $('h1, .email').addClass('show animated jackInTheBox show');
-    }, 1500);
+      $('h1, .email').addClass('show animated jackInTheBox');
+    }, 1000);
   };
 
   $window.on('scroll', function () {

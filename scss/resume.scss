@@ -106,9 +106,10 @@ h3 {
 }
 
 #sideNav {
+  transition: left 1s;
   height: 140vh;
   top: -10vh;
-  left: -1.5vw;
+  left: -40vw;
 }
 
 .navbarContent {
@@ -125,8 +126,8 @@ h3 {
 
 nav {
   padding: relative;
-  transform: translateX(-50vw) rotate(-3deg);
-  transition: transform 1.5s;
+  left: -10vw;
+  transform: rotate(-3deg);
   &:before {
     position: absolute;
     content: '';
@@ -137,8 +138,8 @@ nav {
   }
 }
 
-.navShow {
-  transform: translateX(0) rotate(-3deg);
+#sideNav.navShow {
+  left: -1.5vw;
 }
 
 .social-icons a {
