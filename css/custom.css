@@ -1,5 +1,13 @@
+.toggleButton {
+  z-index: 99;
+}
+
 .toggleButton p {
   right: -80px;
+}
+
+.card {
+  margin-right: 30px;
 }
 
 @media screen and (max-width: 991px) {
@@ -46,10 +54,18 @@
 
   .toggleButton {
     top: 100px;
-    z-index: 99;
   }
 
   .main {
     margin-left: 0 !important;
+  }
+
+  .cardWrap {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    /* margin-left: 0 !important; */
+    margin-top: 30px;
   }
 }
