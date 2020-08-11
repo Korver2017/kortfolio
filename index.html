@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Korver's Portfolio</title>
+  <title>Korver Portfolio</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +23,9 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+
+  <!-- My styles for this project -->
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body id="page-top">
@@ -34,7 +37,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Korver Huang</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/my-profile.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./images/avatar.jpg" alt="">
         </span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,9 +52,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
           </li>
-          <!-- <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
           </li>
@@ -70,7 +70,7 @@
     <p>Light / Dark Mode</p>
   </div>
 
-  <div class="container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-5 p-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="cover">
       <div class="my-auto">
@@ -98,7 +98,6 @@
 
     <hr class="m-0">
 
-    <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="introduction"> -->
     <section class="resume-section p-3 p-lg-5 d-flex flex-row" id="introduction">
       <div class="my-auto">
         <h2 class="mb-5">Introduction</h2>
@@ -110,15 +109,8 @@
                 <div class="subheading ml-3">self-learning about 1.5 years</div>
                 <div class="subheading ml-3">recent goals: focus on vue.js & the core of JavaScript</div>
                 <div class="subheading ml-3">future goals: Vuex, Nuxt.js, CS 50, Node.js </div>
-                <!-- <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day,
-              going forward, a new normal that has evolved from generation X is on the runway heading towards a
-              streamlined cloud solution. User generated content in real-time will have multiple touchpoints for
-              offshoring.</p> -->
               </div>
             </div>
-            <!-- <div class="resume-date text-md-right">
-            <span class="text-primary">March 2013 - Present</span>
-          </div> -->
           </div>
 
           <div class="resume-item col-6 d-flex flex-column flex-md-row mb-5">
@@ -127,14 +119,8 @@
               <div class="subheadingGroup2">
                 <div class="subheading ml-3">English communication</div>
                 <div class="subheading ml-3">can read English technical documentation</div>
-                <!-- <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the
-              digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information
-              highway will close the loop on focusing solely on the bottom line.</p> -->
               </div>
             </div>
-            <!-- <div class="resume-date text-md-right">
-            <span class="text-primary">December 2011 - March 2013</span>
-          </div> -->
           </div>
         </div>
 
@@ -146,13 +132,7 @@
                 <div class="subheading ml-3">learn how to dive into a study</div>
                 <div class="subheading ml-3">accelerate problem-solving ability</div>
                 <div class="subheading ml-3">know the core of business & management</div>
-                <!-- <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless
-              key performance indicators offline to maximise the long tail. Keeping your eye on the ball while
-              performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p> -->
               </div>
-              <!-- <div class="resume-date text-md-right">
-            <span class="text-primary">July 2010 - December 2011</span>
-          </div> -->
             </div>
           </div>
 
@@ -162,13 +142,7 @@
               <div class="subheadingGroup4">
                 <div class="subheading ml-3">communication between fellows & seniors</div>
                 <div class="subheading ml-3">scheduling & execution</div>
-                <!-- <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
-              users after installed base benefits. Dramatically visualize customer directed convergence without
-              revolutionary ROI.</p> -->
               </div>
-              <!-- <div class="resume-date text-md-right">
-            <span class="text-primary">September 2008 - June 2010</span>
-          </div> -->
             </div>
           </div>
         </div>
@@ -180,13 +154,7 @@
               <div class="subheadingGroup5">
                 <div class="subheading ml-3">beef up administration ability</div>
                 <div class="subheading ml-3">cultivate service attitude</div>
-                <!-- <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C
-              users after installed base benefits. Dramatically visualize customer directed convergence without
-              revolutionary ROI.</p> -->
               </div>
-              <!-- <div class="resume-date text-md-right">
-                    <span class="text-primary">September 2008 - June 2010</span>
-                  </div> -->
             </div>
           </div>
         </div>
@@ -194,38 +162,6 @@
       </div>
 
     </section>
-    <!-- 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">University of Colorado Boulder</h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Science - Web Development Track</div>
-            <p>GPA: 3.23</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2006 - May 2010</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">James Buchanan High School</h3>
-            <div class="subheading mb-3">Technology Magnet Program</div>
-            <p>GPA: 3.56</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2002 - May 2006</span>
-          </div>
-        </div>
-
-      </div>
-    </section> -->
 
     <hr class="m-0">
 
@@ -276,29 +212,32 @@
         <h2 class="mb-5">Works Collection</h2>
 
         <div class="cardWrap d-flex flex-row">
-          <div class="card col-md-3" style="width: 18rem;">
-            <img class="card-img-top mt-2" src="./img/weather.jpg" alt="Card image cap">
+          <div class="card col-lg-3 col-12">
+            <img class="card-img-top mt-2" src="./images/clock.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title">Weather Forecast App</h4>
+              <h4 class="card-title">Vue.js Countdown Component</h4>
+              <h5>By Wrapping Up jQuery Plugin</h5>
+
+              <br />
               <p class="card-text">
-                Promise<br>
-                Template String<br>
-                AJAX Open Data<br>
-                jQuery UI Autocomplete<br>
-                UI Layout</p>
+                Vue.js<br />
+                Component Management<br />
+                Props & Custom Event<br />
+                UI Layout
+              </p>
             </div>
             <div class="card-body">
-              <a href="https://korver2017.github.io/promise-weather-forecast-app/" class="btn btn-outline-success mb-2"
+              <a href="https://korver2017.github.io/vuejs_countdown_component/" class="btn btn-outline-primary mb-2"
                 target="_blank">Visit
                 Website</a><br>
-              <a href="https://github.com/Korver2017/promise-weather-forecast-app" class="btn btn-outline-success"
+              <a href="https://github.com/Korver2017/vuejs_countdown_component" class="btn btn-outline-primary"
                 target="_blank">GitHub
                 Repo</a>
             </div>
           </div>
 
-          <div class="card col-md-3 ml-5" style="width: 18rem;">
-            <img class="card-img-top mt-2" src="./img/file.jpg" alt="Card image cap">
+          <div class="card col-lg-3 col-12">
+            <img class="card-img-top mt-2" src="./images/file.jpg" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title">Korver Portfolio</h4>
               <p class="card-text">
@@ -309,21 +248,21 @@
               </p>
             </div>
             <div class="card-body">
-              <a href="https://github.com/Korver2017/bootstrap4-portfolio" class="btn btn-outline-success" target="_blank">GitHub
+              <a href="https://github.com/Korver2017/bootstrap4-portfolio" class="btn btn-outline-primary" target="_blank">GitHub
                 Repo</a>
             </div>
           </div>
 
-          <div class="card col-md-3 ml-5" style="width: 18rem;">
-            <img class="card-img-top mt-2" src="./img/toilet.jpg" alt="Card image cap">
+          <div class="card col-lg-3 col-12">
+            <img class="card-img-top mt-2" src="./images/toilet.jpg" alt="Card image cap">
             <div class="card-body">
               <h4 class="card-title">Hualien City Public Toilet Map</h4>
               <p class="card-text">Google Map API</p>
             </div>
             <div class="card-body">
-              <a href="https://korver2017.github.io/google-map-public-toilet/" class="btn btn-outline-success mb-2"
+              <a href="https://korver2017.github.io/google-map-public-toilet/" class="btn btn-outline-primary mb-2"
                 target="_blank">Visit Website</a><br>
-              <a href="https://github.com/Korver2017/google-map-public-toilet" class="btn btn-outline-success" target="_blank">GitHub
+              <a href="https://github.com/Korver2017/google-map-public-toilet" class="btn btn-outline-primary" target="_blank">GitHub
                 Repo</a>
             </div>
           </div>
