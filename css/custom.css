@@ -1,0 +1,55 @@
+.toggleButton p {
+  right: -80px;
+}
+
+@media screen and (max-width: 991px) {
+
+  #sideNav, #sideNav.navShow {
+    left: 0;
+  }
+
+  #sideNav {
+    top: 0;
+    height: 54px;
+  }
+  
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  .navbarContent {
+    transform: rotate(0);
+    width: 100%;
+    margin-left: 0 !important;
+    height: auto;
+  }
+  
+  nav {
+    transform: rotate(0);
+  }
+
+  .navbar-collapse {
+    transition: none;
+  }
+
+  .navbar-nav, .navbar-toggler {
+    background-color: #3066be;
+  }
+
+  .navbar-toggler {
+    border-radius: 0;
+  }
+
+  #sideNav .navbar-toggler:focus {
+    outline: auto;
+  }
+
+  .toggleButton {
+    top: 100px;
+    z-index: 99;
+  }
+
+  .main {
+    margin-left: 0 !important;
+  }
+}
