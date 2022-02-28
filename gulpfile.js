@@ -115,14 +115,17 @@ gulp.task('browserSync', function(done) {
   done();
 });
 
-function reload (done) {
+// Reload for `watchTask`
+function browserReload (done) {
   browserSync.reload();
   done();
 };
 
+// Watch task
 gulp.task('watchTask', function () {
-  gulp.watch('./*.html', reload);
-  gulp.watch(['./scss/*.scss', './js/*.js'], gulp.series('css', 'js', reload));
+  gulp.watch('./*.html', browserReload);
+  gulp.watch('./js/*.js', browserReload);
+  gulp.watch('./scss/*.scss', gulp.series('css', browserReload));
 });
 
 // Dev task
