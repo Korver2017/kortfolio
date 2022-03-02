@@ -124,8 +124,7 @@ function browserReload (done) {
 // Watch task
 gulp.task('watchTask', function () {
   gulp.watch('./*.html', browserReload);
-  gulp.watch(['./js/*.js', '!./js/*.min.js'], gulp.series('js', browserReload));
-  gulp.watch('./scss/*.scss', gulp.series('css', browserReload));
+  gulp.watch(['./scss/*.scss', './js/*.js', '!./js/*.min.js'], gulp.series('css', 'js', browserReload));
 });
 
 // Dev task
