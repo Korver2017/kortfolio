@@ -1,3 +1,17 @@
+/*!
+ * Start Bootstrap - Korver Portfolio v1.0.0 (https://startbootstrap.com/template-overviews/resume)
+ * Copyright 2013-2022 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/Korver Portfolio/blob/master/LICENSE)
+ */
+
+#sideNav .navbar-brand .img-profile:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.education {
+  margin-bottom: 2rem;
+}
+
 .toggleButton {
   z-index: 99;
 }
@@ -11,7 +25,6 @@
 }
 
 @media screen and (max-width: 991px) {
-
   #sideNav, #sideNav.navShow {
     left: 0;
   }
@@ -20,23 +33,26 @@
     top: 0;
     height: 54px;
   }
-  
+
   .navbar-brand {
     margin-right: 0;
   }
 
   .navbarContent {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
     width: 100%;
     margin-left: 0 !important;
     height: auto;
   }
-  
+
   nav {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 
   .navbar-collapse {
+    -webkit-transition: none;
     transition: none;
   }
 
@@ -61,6 +77,7 @@
   }
 
   .cardWrap {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
