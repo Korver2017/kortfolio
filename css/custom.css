@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/Korver Portfolio/blob/master/LICENSE)
  */
 
+#sideNav .navbar-brand .img-profile:hover {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
 .education {
   margin-bottom: 2rem;
 }
