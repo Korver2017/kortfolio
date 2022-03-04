@@ -55,10 +55,6 @@ gulp.task('css:compile', function() {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
     .pipe(header(banner, {
       pkg: pkg
     }))
@@ -66,7 +62,7 @@ gulp.task('css:compile', function() {
 });
 
 // Minify CSS
-gulp.task('css:minify', gulp.series('css:compile'), function() {
+gulp.task('css:minify', function() {
   return gulp.src([
       './css/*.css',
       '!./css/*.min.css'
