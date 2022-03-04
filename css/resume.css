@@ -94,19 +94,12 @@ p.lead {
     position: fixed;
     top: 0;
     left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 17rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: auto auto 0;
     padding: 0.5rem;
@@ -117,22 +110,13 @@ p.lead {
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: flex-start;
-    -webkit-box-flex: 0;
-    -ms-flex-positive: 0;
     flex-grow: 0;
     width: 100%;
     margin-bottom: auto;
   }
   #sideNav .navbar-collapse .navbar-nav {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
   }
@@ -183,7 +167,6 @@ a:hover, a:focus, a:active {
 
 body {
   opacity: 0;
-  -webkit-transition: all 1s;
   transition: all 1s;
   overflow-x: hidden;
 }
@@ -223,7 +206,6 @@ body.nightMode .customCard p {
   color: #95A1A8;
 }
 body.nightMode .customCard:hover {
-  -webkit-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
 }
 
@@ -249,7 +231,6 @@ h3 {
   height: 20px;
   cursor: pointer;
   border-radius: 20px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .toggleButton:before {
@@ -261,7 +242,6 @@ h3 {
   height: 14px;
   background-color: #00151f;
   border-radius: 50%;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .toggleButton p {
@@ -285,7 +265,6 @@ h3 {
 }
 
 #sideNav {
-  -webkit-transition: left 1s;
   transition: left 1s;
   height: 140vh;
   top: -10vh;
@@ -297,23 +276,16 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 17rem;
   height: 100vh;
-  -webkit-transform: rotate(3deg);
   transform: rotate(3deg);
 }
 
 nav {
   padding: relative;
   left: -10vw;
-  -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
 }
 nav:before {
@@ -330,13 +302,9 @@ nav:before {
 }
 
 .social-icons a {
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 1, 1, 1.3);
-  transition: -webkit-transform 0.3s cubic-bezier(0, 1, 1, 1.3);
   transition: transform 0.3s cubic-bezier(0, 1, 1, 1.3);
-  transition: transform 0.3s cubic-bezier(0, 1, 1, 1.3), -webkit-transform 0.3s cubic-bezier(0, 1, 1, 1.3);
 }
 .social-icons a:hover {
-  -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
 .social-icons a:first-child:hover {
@@ -372,12 +340,10 @@ nav:before {
 .dev-icons {
   font-size: 4rem;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
 .card {
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }

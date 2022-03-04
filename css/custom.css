@@ -25,11 +25,8 @@
 }
 
 #contact .cardWrap {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -39,24 +36,19 @@
   letter-spacing: 2px;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .customCard:hover {
-  -webkit-transform: translateY(-30px) scale(1.01);
   transform: translateY(-30px) scale(1.01);
-  -webkit-box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
 }
 
 .customCard .box {
   text-align: center;
   padding: 20px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
 }
@@ -87,8 +79,6 @@
 }
 
 .customCard .box span {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
@@ -107,7 +97,6 @@
   color: #fff;
   margin: 0 10px;
   font-size: 20px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   text-align: center;
 }
@@ -125,13 +114,9 @@
   text-align: center;
   font-size: 1.5rem;
   line-height: 3.5rem;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 .customCard .iconLink li:hover {
-  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 .customCard .iconLink li:first-child:hover {
@@ -159,7 +144,6 @@
   }
 
   .navbarContent {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
     width: 100%;
     margin-left: 0 !important;
@@ -167,12 +151,10 @@
   }
 
   nav {
-    -webkit-transform: rotate(0);
     transform: rotate(0);
   }
 
   .navbar-collapse {
-    -webkit-transition: none;
     transition: none;
   }
 
@@ -197,7 +179,6 @@
   }
 
   .cardWrap {
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
