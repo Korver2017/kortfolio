@@ -2,15 +2,23 @@
 // Custom JavaScript
 $(document).ready (function () {
 
-  const $window = $(window);
+  // Prepare variables
+  const $window = $(window)
+      , $body = $('body')
+      , $intro = $('#introduction')
+      , $skills = $('#skills')
+      , $collection = $('#collection')
+      , $card = $('#collection .card')
+      , $contact = $('#contact')
+      ;
 
-  // Toggle for light / dark mode
+  // Toggle for light / dark mode.
   $('.toggleButton').on ('click', function () {
     $(this).toggleClass ('active');
-    $('body').toggleClass ('nightMode');
+    $body.toggleClass ('nightMode');
   });
 
-  $('body').addClass ('show');
+  $body.addClass ('show');
 
   setTimeout (function () {
     $('#sideNav').addClass ('navShow');
@@ -23,7 +31,9 @@ $(document).ready (function () {
   };
 
   $window.on ('scroll', function () {
-    var $windowScrollTop = $window.scrollTop ();
+
+    let $windowScrollTop = $window.scrollTop ();
+
     if ($windowScrollTop < $('#cover').outerHeight () / 4) {
       $('h1, .email').addClass ('animated jackInTheBox');
     }
@@ -35,38 +45,43 @@ $(document).ready (function () {
     });
 
     $('.social-icons').stop (true).animate ({}, 1000, function () {
-      var $moveUnit = (($windowScrollTop) / $window.height () * 100);
+
+      let $moveUnit = (($windowScrollTop) / $window.height () * 100);
+
       $(this).css ({
         'transform': 'translateY(' + ($moveUnit / 5) + 'vh)'
       });
     });
+    
+    if ($window.scrollTop () > ($intro.offset ().top) - $intro.outerHeight () / 3) {
 
-    if ($window.scrollTop() > ($('#introduction').offset ().top) - $('#introduction').outerHeight () / 3) {
-
-      setTimeout (function () {
+      setTimeout  (function () {
         $('.subheadingGroup1').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 500);
-      setTimeout(function () {
+
+      setTimeout (function () {
         $('.subheadingGroup2').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 700);
-      setTimeout(function () {
+
+      setTimeout (function () {
         $('.subheadingGroup3').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 900);
-      setTimeout(function () {
+
+      setTimeout (function () {
         $('.subheadingGroup4').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 1100);
-      setTimeout(function () {
+      
+      setTimeout (function () {
         $('.subheadingGroup5').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 1300);
     }
-
-    if ($window.scrollTop () > ($('#skills').offset ().top) - $('#skills').outerHeight () / 3) {
+    
+    if ($window.scrollTop () > ($skills.offset ().top) - $skills.outerHeight () / 3) {
       $('.dev-icons').css ('opacity', 1).addClass ('animated bounceInRight');
     }
 
-    if ($window.scrollTop() > ($('#collection').offset ().top) - $('#collection').outerHeight() / 3) {
+    if ($window.scrollTop() > ($collection.offset ().top) - $collection.outerHeight () / 3) {
 
-      $card = $('#collection .card');
       $card.filter(':first-child').css ('opacity', 1).addClass ('animated bounceInLeft');
       $card.filter(':last-child').css ('opacity', 1).addClass ('animated bounceInRight');
 
@@ -75,9 +90,8 @@ $(document).ready (function () {
       }, 800);
     }
 
-    if ($window.scrollTop () > ($('#contact').offset ().top) - $('#contact').outerHeight () / 3) {
+    if ($window.scrollTop () > ($contact.offset ().top) - $contact.outerHeight () / 3) {
       $('#contact .cardWrap').css ('opacity', 1).addClass ('animated flipInY');
     }
-
   });
 });
