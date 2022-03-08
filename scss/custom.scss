@@ -16,7 +16,7 @@
     background-color: #2E2D2D;
   }
   .linkedin:hover {
-    background-color: #2F528F;
+    background-color: #0077AE;
   }
 }
 .toggleButton {
@@ -25,6 +25,16 @@
 
 .toggleButton p {
   right: -80px;
+}
+#introduction {
+  .resume-item {
+    h3 {
+      text-transform: initial;
+    }
+    ul li {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .card {
