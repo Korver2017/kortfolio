@@ -1,21 +1,21 @@
 #sideNav .navbar-brand .img-profile:hover {
-  border-color: rgba(255,255,255,.75);
+  border-color: rgba(255,255,255,.5);
 }
 .education {
   margin-bottom: 2rem;
 }
-.social-icons a {
-  transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
-  &:hover {
-    transform: scale(1.1);
+.social-icons {
+  a {
+    transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
+    margin-right: 0.5rem;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
-  &:first-child:hover {
+  .github:hover {
     background-color: #2E2D2D;
   }
-  &:nth-child(2):hover {
-    background-color: #0077AE;
-  }
-  &:last-child:hover {
+  .linkedin:hover {
     background-color: #2F528F;
   }
 }
