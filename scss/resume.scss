@@ -142,6 +142,22 @@ nav {
   left: -1.5vw;
 }
 
+.social-icons a {
+  transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
+  &:hover {
+    transform: scale(1.3);
+  }
+  &:first-child:hover {
+    background-color: #2E2D2D;
+  }
+  &:nth-child(2):hover {
+    background-color: #0077AE;
+  }
+  &:last-child:hover {
+    background-color: #2F528F;
+  }
+}
+
 .subheadingGroup1 {
   opacity: 0;
 }
