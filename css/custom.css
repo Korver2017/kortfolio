@@ -12,6 +12,22 @@
   margin-bottom: 2rem;
 }
 
+.social-icons a {
+  transition: transform 0.3s cubic-bezier(0, 1, 1, 1.3);
+}
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+.social-icons a:first-child:hover {
+  background-color: #2E2D2D;
+}
+.social-icons a:nth-child(2):hover {
+  background-color: #0077AE;
+}
+.social-icons a:last-child:hover {
+  background-color: #2F528F;
+}
+
 .toggleButton {
   z-index: 99;
 }
