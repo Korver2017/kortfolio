@@ -44,7 +44,7 @@
   transition: opacity 0.5s;
 }
 
-.customCard {
+.name-card {
   width: 600px;
   min-height: 400px;
   letter-spacing: 2px;
@@ -55,19 +55,19 @@
   transition: 0.5s;
 }
 
-.customCard:hover {
+.name-card:hover {
   transform: translateY(-30px) scale(1.01);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
 }
 
-.customCard .box {
+.name-card .box {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
   width: 100%;
 }
 
-.customCard .box .img {
+.name-card .box .img {
   width: 240px;
   height: 240px;
   background-image: url("/images/avatar.jpg");
@@ -78,7 +78,7 @@
   overflow: hidden;
 }
 
-.customCard span {
+.name-card span {
   font-size: 1.2rem;
   background: #e91e63;
   color: #fff;
@@ -87,26 +87,26 @@
   border-radius: 20px;
 }
 
-.customCard .box p {
+.name-card .box p {
   margin-top: 30px;
   color: #262626;
 }
 
-.customCard .box span {
+.name-card .box span {
   display: inline-flex;
 }
 
-.customCard .box ul {
+.name-card .box ul {
   margin: 0;
   padding: 0;
 }
 
-.customCard .box ul li {
+.name-card .box ul li {
   list-style: none;
   float: left;
 }
 
-.customCard .box ul li a {
+.name-card .box ul li a {
   display: block;
   color: #fff;
   margin: 0 10px;
@@ -115,11 +115,11 @@
   text-align: center;
 }
 
-.customCard .iconLink {
+.name-card .iconLink {
   background: none;
   padding: 4px;
 }
-.customCard .iconLink li {
+.name-card .iconLink li {
   height: 3.5rem;
   width: 3.5rem;
   background-color: #495057;
@@ -130,16 +130,16 @@
   line-height: 3.5rem;
   transition: transform 0.3s;
 }
-.customCard .iconLink li:hover {
+.name-card .iconLink li:hover {
   transform: scale(1.2);
 }
-.customCard .iconLink li:first-child:hover {
+.name-card .iconLink li:first-child:hover {
   background-color: #2E2D2D;
 }
-.customCard .iconLink li:nth-child(2):hover {
+.name-card .iconLink li:nth-child(2):hover {
   background-color: #0077AE;
 }
-.customCard .iconLink li:last-child:hover {
+.name-card .iconLink li:last-child:hover {
   background-color: #2F528F;
 }
 
