@@ -81,7 +81,7 @@
 .name-card .info .avatar {
   width: 240px;
   height: 240px;
-  background-image: url("/images/avatar.jpg");
+  background-image: url("../images/avatar.jpg");
   background-size: cover;
   background-position: 0 30%;
   margin: 0 auto;
