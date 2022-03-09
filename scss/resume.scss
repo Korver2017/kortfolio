@@ -32,7 +32,7 @@ body.nightMode {
     }
   }
   nav:before, #sideNav {
-    background-color: #95a1a8 !important;
+    background-color: #252423 !important;
   }
   #cover {
     h3, p {
@@ -58,13 +58,23 @@ body.nightMode {
       color: #e6e6e6;
     }
   }
-  .card {
-    background-color: #252423;
-    h4, h5 {
-      color: #c3e1f3;
-    }
-    p {
-      color: #e6e6e6;
+  #collection {
+    .card {
+      background-color: #252423;
+      h4, h5 {
+        color: #c3e1f3;
+      }
+      p {
+        color: #e6e6e6;
+      }
+      .btn {
+        color: #c3e1f3;
+        border-color: #c3e1f3;
+        &:hover {
+          color: #252423;
+          background-color: #c3e1f3;
+        }
+      }
     }
   }
   #contact {
@@ -78,6 +88,9 @@ body.nightMode {
       }
       &:hover {
         box-shadow: 0 30px 70px rgba(145, 145, 145, .3);
+      }
+      .github:hover {
+        border: 1px solid #95A1A8;
       }
     }
   }
