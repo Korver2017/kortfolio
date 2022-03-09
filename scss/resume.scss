@@ -13,12 +13,14 @@ body {
 
 body.nightMode {
   background-color: #44423F;
-  // background-color: $success;
   h1 {
     color: #98C8B2 !important;
     span {
       color: #95A1A8 !important;
     }
+  }
+  h2 {
+    color: #e6e6e6 !important;
   }
   .toggleButton {
     background-color: #00151f;
@@ -30,22 +32,42 @@ body.nightMode {
   nav:before, #sideNav {
     background-color: #95a1a8 !important;
   }
+  #cover {
+    h3, p {
+      color: #95A1A8 !important;
+    }
+    .social-icons a {
+      background-color: #5c666f;
+    }
+  }
+  #introduction {
+    ul li {
+      color: #e6e6e6;
+    }
+  }
+  #skills {
+    .dev-icons i:hover {
+      color: #e6e6e6;
+    }
+  }
   .card {
     background-color: #52504D;
     h4 {
       color: #95A1A8;
     }
   }
-  .customCard {
-    background: #52504D;
-    h4 {
-      color: #95A1A8;
-    }
-    p {
-      color: #95A1A8;
-    }
-    &:hover {
-      box-shadow: 0 30px 70px rgba(0, 0, 0, .3);
+  #contact {
+    .name-card {
+      background: #252423;
+      h4 {
+        color: #95A1A8;
+      }
+      p {
+        color: #95A1A8;
+      }
+      &:hover {
+        box-shadow: 0 30px 70px rgba(145, 145, 145, .3);
+      }
     }
   }
 }
@@ -142,19 +164,16 @@ nav {
   left: -1.5vw;
 }
 
-.social-icons a {
+#cover .social-icons a {
   transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
   &:first-child:hover {
     background-color: #2E2D2D;
   }
   &:nth-child(2):hover {
     background-color: #0077AE;
-  }
-  &:last-child:hover {
-    background-color: #2F528F;
   }
 }
 

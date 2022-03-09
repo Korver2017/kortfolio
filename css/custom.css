@@ -86,8 +86,8 @@
   text-align: center;
 }
 .name-card .info .avatar {
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   background-image: url("../images/avatar.jpg");
   background-size: cover;
   background-position: 0 30%;
@@ -96,7 +96,7 @@
   overflow: hidden;
 }
 .name-card .info p {
-  margin-top: 30px;
+  margin-top: 20px;
   color: #262626;
 }
 .name-card span {
@@ -129,7 +129,7 @@
   background-color: #2E2D2D;
 }
 .name-card .icon-links .linkedin:hover {
-  background-color: #2F528F;
+  background-color: #0077AE;
 }
 
 @media screen and (max-width: 991px) {
