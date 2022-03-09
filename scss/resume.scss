@@ -10,21 +10,23 @@ body {
   transition: all 1s;
   overflow-x: hidden;
 }
-
 body.nightMode {
   background-color: #44423F;
   h1 {
     color: #98C8B2 !important;
     span {
-      color: #95A1A8 !important;
+      color: #c3e1f3 !important;
     }
   }
   h2 {
-    color: #e6e6e6 !important;
+    color: #c3e1f3 !important;
   }
   .toggleButton {
     background-color: #00151f;
     border-color: #fff;
+    p {
+      color: #c3e1f3;
+    }
     &:before {
       background-color: #fff;
     }
@@ -34,7 +36,10 @@ body.nightMode {
   }
   #cover {
     h3, p {
-      color: #95A1A8 !important;
+      color: #c3e1f3 !important;
+    }
+    .email {
+      color: #c3e1f3;
     }
     .social-icons a {
       background-color: #5c666f;
@@ -46,14 +51,20 @@ body.nightMode {
     }
   }
   #skills {
+    .subheading {
+      color: #c3e1f3;
+    }
     .dev-icons i:hover {
       color: #e6e6e6;
     }
   }
   .card {
-    background-color: #52504D;
-    h4 {
-      color: #95A1A8;
+    background-color: #252423;
+    h4, h5 {
+      color: #c3e1f3;
+    }
+    p {
+      color: #e6e6e6;
     }
   }
   #contact {
