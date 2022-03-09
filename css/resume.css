@@ -178,23 +178,29 @@ body.nightMode h1 {
   color: #98C8B2 !important;
 }
 body.nightMode h1 span {
-  color: #95A1A8 !important;
+  color: #c3e1f3 !important;
 }
 body.nightMode h2 {
-  color: #e6e6e6 !important;
+  color: #c3e1f3 !important;
 }
 body.nightMode .toggleButton {
   background-color: #00151f;
   border-color: #fff;
 }
+body.nightMode .toggleButton p {
+  color: #c3e1f3;
+}
 body.nightMode .toggleButton:before {
   background-color: #fff;
 }
 body.nightMode nav:before, body.nightMode #sideNav {
-  background-color: #95a1a8 !important;
+  background-color: #252423 !important;
 }
 body.nightMode #cover h3, body.nightMode #cover p {
-  color: #95A1A8 !important;
+  color: #c3e1f3 !important;
+}
+body.nightMode #cover .email {
+  color: #c3e1f3;
 }
 body.nightMode #cover .social-icons a {
   background-color: #5c666f;
@@ -202,14 +208,28 @@ body.nightMode #cover .social-icons a {
 body.nightMode #introduction ul li {
   color: #e6e6e6;
 }
+body.nightMode #skills .subheading {
+  color: #c3e1f3;
+}
 body.nightMode #skills .dev-icons i:hover {
   color: #e6e6e6;
 }
-body.nightMode .card {
-  background-color: #52504D;
+body.nightMode #collection .card {
+  background-color: #252423;
 }
-body.nightMode .card h4 {
-  color: #95A1A8;
+body.nightMode #collection .card h4, body.nightMode #collection .card h5 {
+  color: #c3e1f3;
+}
+body.nightMode #collection .card p {
+  color: #e6e6e6;
+}
+body.nightMode #collection .card .btn {
+  color: #c3e1f3;
+  border-color: #c3e1f3;
+}
+body.nightMode #collection .card .btn:hover {
+  color: #252423;
+  background-color: #c3e1f3;
 }
 body.nightMode #contact .name-card {
   background: #252423;
@@ -222,6 +242,9 @@ body.nightMode #contact .name-card p {
 }
 body.nightMode #contact .name-card:hover {
   box-shadow: 0 30px 70px rgba(145, 145, 145, 0.3);
+}
+body.nightMode #contact .name-card .github:hover {
+  border: 1px solid #95A1A8;
 }
 
 h1 {

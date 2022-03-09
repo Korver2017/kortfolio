@@ -1,6 +1,6 @@
 
 // Custom JavaScript
-$(document).ready (function () {
+jQuery (function () {
 
   // Prepare variables
   const $window = $(window)
@@ -20,8 +20,12 @@ $(document).ready (function () {
 
   $body.addClass ('show');
 
+  // Initialize to display page.
   setTimeout (function () {
     $('#sideNav').addClass ('navShow');
+
+    // Prevent page empty when refresh.
+    $window.trigger ('scroll');
   }, 1500);
   
   if ($window.scrollTop () < $('#cover').outerHeight () / 4) {
