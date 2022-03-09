@@ -180,6 +180,9 @@ body.nightMode h1 {
 body.nightMode h1 span {
   color: #95A1A8 !important;
 }
+body.nightMode h2 {
+  color: #e6e6e6 !important;
+}
 body.nightMode .toggleButton {
   background-color: #00151f;
   border-color: #fff;
@@ -190,23 +193,35 @@ body.nightMode .toggleButton:before {
 body.nightMode nav:before, body.nightMode #sideNav {
   background-color: #95a1a8 !important;
 }
+body.nightMode #cover h3, body.nightMode #cover p {
+  color: #95A1A8 !important;
+}
+body.nightMode #cover .social-icons a {
+  background-color: #5c666f;
+}
+body.nightMode #introduction ul li {
+  color: #e6e6e6;
+}
+body.nightMode #skills .dev-icons i:hover {
+  color: #e6e6e6;
+}
 body.nightMode .card {
   background-color: #52504D;
 }
 body.nightMode .card h4 {
   color: #95A1A8;
 }
-body.nightMode .customCard {
-  background: #52504D;
+body.nightMode #contact .name-card {
+  background: #252423;
 }
-body.nightMode .customCard h4 {
+body.nightMode #contact .name-card h4 {
   color: #95A1A8;
 }
-body.nightMode .customCard p {
+body.nightMode #contact .name-card p {
   color: #95A1A8;
 }
-body.nightMode .customCard:hover {
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+body.nightMode #contact .name-card:hover {
+  box-shadow: 0 30px 70px rgba(145, 145, 145, 0.3);
 }
 
 h1 {
@@ -301,20 +316,17 @@ nav:before {
   left: -1.5vw;
 }
 
-.social-icons a {
+#cover .social-icons a {
   transition: transform 0.3s cubic-bezier(0, 1, 1, 1.3);
 }
-.social-icons a:hover {
-  transform: scale(1.3);
+#cover .social-icons a:hover {
+  transform: scale(1.1);
 }
-.social-icons a:first-child:hover {
+#cover .social-icons a:first-child:hover {
   background-color: #2E2D2D;
 }
-.social-icons a:nth-child(2):hover {
+#cover .social-icons a:nth-child(2):hover {
   background-color: #0077AE;
-}
-.social-icons a:last-child:hover {
-  background-color: #2F528F;
 }
 
 .subheadingGroup1 {
