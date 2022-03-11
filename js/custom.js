@@ -29,39 +29,40 @@ jQuery (function () {
     $window.trigger ('scroll');
   }, 1500);
 
+  // Function for scroll effect.
   $window.on ('scroll', function () {
 
     let $windowScrollTop = $window.scrollTop ();
 
+    // Calculate anchor position.
     function calcAnchor (target) {
       return target.offset ().top - target.outerHeight () / 3;
     }
 
+    // If scroll bigger than anchor, return true, then trigger animation.
     function trigger (target) {
       return $windowScrollTop > calcAnchor (target);
     }
 
+    // Animation for name & email.
     if ($windowScrollTop < $cover.outerHeight () / 4)
       $cover.find ('h1, .email').addClass ('animated jackInTheBox');
 
+    // Parallax effect for position.
     $('.scrollMoveOut').stop (true).animate ({}, 1000, function () {
-      $(this).css ({
-        'transform': 'translateX(' + ($windowScrollTop / 20) + 'px)'
-      });
+      $(this).css ({'transform': `translateX(${($windowScrollTop / 20)}px)`});
     });
 
+    // Parallax effect for social icons.
     $('.social-icons').stop (true).animate ({}, 1000, function () {
-
       let $moveUnit = (($windowScrollTop) / $window.height () * 100);
-
-      $(this).css ({
-        'transform': 'translateY(' + ($moveUnit / 5) + 'vh)'
-      });
+      $(this).css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
     });
     
+    // Animation for introduction section.
     if (trigger ($intro)) {
 
-      setTimeout  (function () {
+      setTimeout (function () {
         $('.subheadingGroup1').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 0);
 
@@ -76,16 +77,14 @@ jQuery (function () {
       setTimeout (function () {
         $('.subheadingGroup4').css ('opacity', 1).addClass ('animated fadeInRight');
       }, 900);
-      
-      setTimeout (function () {
-        $('.subheadingGroup5').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 1200);
     }
     
+    // Animation for skills section.
     if (trigger ($skills)) {
       $('.dev-icons').css ('opacity', 1).addClass ('animated bounceInRight');
     }
 
+    // Animation for collection section.
     if (trigger ($collection)) {
 
       $card.filter(':first-child').css ('opacity', 1).addClass ('animated bounceInLeft');
@@ -96,6 +95,7 @@ jQuery (function () {
       }, 800);
     }
 
+    // Animation for contact section.
     if (trigger ($contact)) {
       $('#contact .cardWrap').css ('opacity', 1).addClass ('animated flipInY');
     }
