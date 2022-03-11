@@ -32,7 +32,9 @@ jQuery (function () {
   // Function for scroll effect.
   $window.on ('scroll', function () {
 
-    let $windowScrollTop = $window.scrollTop ();
+    let $windowScrollTop = $window.scrollTop ()
+      , $moveUnit = (($windowScrollTop) / $window.height () * 100)
+      ;
 
     // Calculate anchor position.
     function calcAnchor (target) {
@@ -49,15 +51,10 @@ jQuery (function () {
       $cover.find ('h1, .email').addClass ('animated jackInTheBox');
 
     // Parallax effect for position.
-    $('.scrollMoveOut').stop (true).animate ({}, 1000, function () {
-      $(this).css ({'transform': `translateX(${($windowScrollTop / 20)}px)`});
-    });
+    $('.scrollMoveOut').css ({'transform': `translateX(${($windowScrollTop / 20)}px)`});
 
     // Parallax effect for social icons.
-    $('.social-icons').stop (true).animate ({}, 1000, function () {
-      let $moveUnit = (($windowScrollTop) / $window.height () * 100);
-      $(this).css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
-    });
+    $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
     
     // Animation for introduction section.
     if (trigger ($intro)) {
