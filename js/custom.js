@@ -5,6 +5,7 @@ jQuery (function () {
   // Prepare variables
   const $window = $(window)
       , $body = $('body')
+      , $cover = $('#cover')
       , $intro = $('#introduction')
       , $skills = $('#skills')
       , $collection = $('#collection')
@@ -27,75 +28,72 @@ jQuery (function () {
     // Prevent page empty when refresh.
     $window.trigger ('scroll');
   }, 1500);
-  
-  if ($window.scrollTop () < $('#cover').outerHeight () / 4) {
-    setTimeout (function () {
-      $('h1, .email').addClass ('show animated jackInTheBox');
-    }, 1000);
-  };
 
+  // Function for scroll effect.
   $window.on ('scroll', function () {
 
-    let $windowScrollTop = $window.scrollTop ();
+    let $windowScrollTop = $window.scrollTop ()
+      , $moveUnit = (($windowScrollTop) / $window.height () * 100)
+      ;
 
-    if ($windowScrollTop < $('#cover').outerHeight () / 4) {
-      $('h1, .email').addClass ('animated jackInTheBox');
+    // Calculate anchor position.
+    function calcAnchor (target) {
+      return target.offset ().top - target.outerHeight () / 3;
     }
 
-    $('.scrollMoveOut').stop (true).animate ({}, 1000, function () {
-      $(this).css ({
-        'transform': 'translateX(' + ($windowScrollTop / 20) + 'px)'
-      });
-    });
+    // If scroll bigger than anchor, return true, then trigger animation.
+    function trigger (target) {
+      return $windowScrollTop > calcAnchor (target);
+    }
 
-    $('.social-icons').stop (true).animate ({}, 1000, function () {
+    // Animation for name & email.
+    if ($windowScrollTop < $cover.outerHeight () / 4)
+      $cover.find ('h1, .email').addClass ('animate__animated animate__jackInTheBox');
 
-      let $moveUnit = (($windowScrollTop) / $window.height () * 100);
+    // Parallax effect for position.
+    $('.scrollMoveOut').css ({'transform': `translateX(${($windowScrollTop / 20)}px)`});
 
-      $(this).css ({
-        'transform': 'translateY(' + ($moveUnit / 5) + 'vh)'
-      });
-    });
+    // Parallax effect for social icons.
+    $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
     
-    if ($window.scrollTop () > ($intro.offset ().top) - $intro.outerHeight () / 3) {
-
-      setTimeout  (function () {
-        $('.subheadingGroup1').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 500);
+    // Animation for introduction section.
+    if (trigger ($intro)) {
 
       setTimeout (function () {
-        $('.subheadingGroup2').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 700);
+        $('.subheadingGroup1').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
+      }, 0);
 
       setTimeout (function () {
-        $('.subheadingGroup3').css ('opacity', 1).addClass ('animated fadeInRight');
+        $('.subheadingGroup2').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
+      }, 300);
+
+      setTimeout (function () {
+        $('.subheadingGroup3').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
+      }, 600);
+
+      setTimeout (function () {
+        $('.subheadingGroup4').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, 900);
-
-      setTimeout (function () {
-        $('.subheadingGroup4').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 1100);
-      
-      setTimeout (function () {
-        $('.subheadingGroup5').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 1300);
     }
     
-    if ($window.scrollTop () > ($skills.offset ().top) - $skills.outerHeight () / 3) {
-      $('.dev-icons').css ('opacity', 1).addClass ('animated bounceInRight');
-    }
+    // Animation for skills section.
+    if (trigger ($skills))
+      $('.dev-icons').css ('opacity', 1).addClass ('animate__animated animate__bounceInRight');
 
-    if ($window.scrollTop() > ($collection.offset ().top) - $collection.outerHeight () / 3) {
+    // Animation for collection section.
+    if (trigger ($collection)) {
 
-      $card.filter(':first-child').css ('opacity', 1).addClass ('animated bounceInLeft');
-      $card.filter(':last-child').css ('opacity', 1).addClass ('animated bounceInRight');
+      $card.filter (':first-child').css ('opacity', 1).addClass ('animate__animated animate__backInLeft');
+      $card.filter (':last-child').css ('opacity', 1).addClass ('animate__animated animate__backInRight');
 
       setTimeout (function () {
-        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animated bounceIn');
-      }, 800);
+        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animate__animated animate__zoomIn');
+      }, 600);
     }
 
-    if ($window.scrollTop () > ($contact.offset ().top) - $contact.outerHeight () / 3) {
-      $('#contact .cardWrap').css ('opacity', 1).addClass ('animated flipInY');
+    // Animation for contact section.
+    if (trigger ($contact)) {
+      $('#contact .cardWrap').css ('opacity', 1).addClass ('animate__animated animate__flipInY');
     }
   });
 });
