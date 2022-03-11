@@ -5,6 +5,7 @@ jQuery (function () {
   // Prepare variables
   const $window = $(window)
       , $body = $('body')
+      , $cover = $('#cover')
       , $intro = $('#introduction')
       , $skills = $('#skills')
       , $collection = $('#collection')
@@ -27,20 +28,21 @@ jQuery (function () {
     // Prevent page empty when refresh.
     $window.trigger ('scroll');
   }, 1500);
-  
-  if ($window.scrollTop () < $('#cover').outerHeight () / 4) {
-    setTimeout (function () {
-      $('h1, .email').addClass ('show animated jackInTheBox');
-    }, 1000);
-  };
 
   $window.on ('scroll', function () {
 
     let $windowScrollTop = $window.scrollTop ();
 
-    if ($windowScrollTop < $('#cover').outerHeight () / 4) {
-      $('h1, .email').addClass ('animated jackInTheBox');
+    function calcAnchor (target) {
+      return target.offset ().top - target.outerHeight () / 3;
     }
+
+    function trigger (target) {
+      return $windowScrollTop > calcAnchor (target);
+    }
+
+    if ($windowScrollTop < $cover.outerHeight () / 4)
+      $cover.find ('h1, .email').addClass ('animated jackInTheBox');
 
     $('.scrollMoveOut').stop (true).animate ({}, 1000, function () {
       $(this).css ({
@@ -57,34 +59,34 @@ jQuery (function () {
       });
     });
     
-    if ($window.scrollTop () > ($intro.offset ().top) - $intro.outerHeight () / 3) {
+    if (trigger ($intro)) {
 
       setTimeout  (function () {
         $('.subheadingGroup1').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 500);
+      }, 0);
 
       setTimeout (function () {
         $('.subheadingGroup2').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 700);
+      }, 300);
 
       setTimeout (function () {
         $('.subheadingGroup3').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 900);
+      }, 600);
 
       setTimeout (function () {
         $('.subheadingGroup4').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 1100);
+      }, 900);
       
       setTimeout (function () {
         $('.subheadingGroup5').css ('opacity', 1).addClass ('animated fadeInRight');
-      }, 1300);
+      }, 1200);
     }
     
-    if ($window.scrollTop () > ($skills.offset ().top) - $skills.outerHeight () / 3) {
+    if (trigger ($skills)) {
       $('.dev-icons').css ('opacity', 1).addClass ('animated bounceInRight');
     }
 
-    if ($window.scrollTop() > ($collection.offset ().top) - $collection.outerHeight () / 3) {
+    if (trigger ($collection)) {
 
       $card.filter(':first-child').css ('opacity', 1).addClass ('animated bounceInLeft');
       $card.filter(':last-child').css ('opacity', 1).addClass ('animated bounceInRight');
@@ -94,7 +96,7 @@ jQuery (function () {
       }, 800);
     }
 
-    if ($window.scrollTop () > ($contact.offset ().top) - $contact.outerHeight () / 3) {
+    if (trigger ($contact)) {
       $('#contact .cardWrap').css ('opacity', 1).addClass ('animated flipInY');
     }
   });
