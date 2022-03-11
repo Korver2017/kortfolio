@@ -48,7 +48,7 @@ jQuery (function () {
 
     // Animation for name & email.
     if ($windowScrollTop < $cover.outerHeight () / 4)
-      $cover.find ('h1, .email').addClass ('animated jackInTheBox');
+      $cover.find ('h1, .email').addClass ('animate__animated animate__jackInTheBox');
 
     // Parallax effect for position.
     $('.scrollMoveOut').css ({'transform': `translateX(${($windowScrollTop / 20)}px)`});
@@ -60,41 +60,40 @@ jQuery (function () {
     if (trigger ($intro)) {
 
       setTimeout (function () {
-        $('.subheadingGroup1').css ('opacity', 1).addClass ('animated fadeInRight');
+        $('.subheadingGroup1').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, 0);
 
       setTimeout (function () {
-        $('.subheadingGroup2').css ('opacity', 1).addClass ('animated fadeInRight');
+        $('.subheadingGroup2').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, 300);
 
       setTimeout (function () {
-        $('.subheadingGroup3').css ('opacity', 1).addClass ('animated fadeInRight');
+        $('.subheadingGroup3').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, 600);
 
       setTimeout (function () {
-        $('.subheadingGroup4').css ('opacity', 1).addClass ('animated fadeInRight');
+        $('.subheadingGroup4').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, 900);
     }
     
     // Animation for skills section.
-    if (trigger ($skills)) {
-      $('.dev-icons').css ('opacity', 1).addClass ('animated bounceInRight');
-    }
+    if (trigger ($skills))
+      $('.dev-icons').css ('opacity', 1).addClass ('animate__animated animate__bounceInRight');
 
     // Animation for collection section.
     if (trigger ($collection)) {
 
-      $card.filter(':first-child').css ('opacity', 1).addClass ('animated bounceInLeft');
-      $card.filter(':last-child').css ('opacity', 1).addClass ('animated bounceInRight');
+      $card.filter (':first-child').css ('opacity', 1).addClass ('animate__animated animate__backInLeft');
+      $card.filter (':last-child').css ('opacity', 1).addClass ('animate__animated animate__backInRight');
 
       setTimeout (function () {
-        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animated bounceIn');
-      }, 800);
+        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animate__animated animate__zoomIn');
+      }, 600);
     }
 
     // Animation for contact section.
     if (trigger ($contact)) {
-      $('#contact .cardWrap').css ('opacity', 1).addClass ('animated flipInY');
+      $('#contact .cardWrap').css ('opacity', 1).addClass ('animate__animated animate__flipInY');
     }
   });
 });
