@@ -56,15 +56,15 @@ jQuery (function () {
     // Parallax effect for social icons.
     $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
 
-    // Pass DOM & class name to apply animation effect.
-    function animateCssHandler (dom, effect) {
+    // Pass DOM & `animate.css` class name to apply animation effect.
+    function animateHandler (dom, effect) {
       dom.css ('opacity', 1).addClass (`animate__animated animate__${effect}`);
     }
 
-    // Pass DOM & timeout to apply animation effect.
-    function animationTimer (dom, effect, time) {
+    // Pass a limit time to trigger `animateHandler`.
+    function animateTimer (dom, effect, time) {
       setTimeout (() => {
-        animateCssHandler (dom, effect);
+        animateHandler (dom, effect);
       }, time);
     }
     
@@ -74,24 +74,23 @@ jQuery (function () {
       const $introGroup = $intro.find ('.intro-group');
 
       $introGroup.each (function (i) {
-        animationTimer ($(this), 'fadeInRight', 300 * i);
+        animateTimer ($(this), 'fadeInRight', 300 * i);
       });
     }
     
     // Animation for skills section.
     if (trigger ($skills))
-      animateCssHandler ($('.dev-icons'), 'bounceInRight');
+      animateHandler ($('.dev-icons'), 'bounceInRight');
 
     // Animation for collection section.
     if (trigger ($collection)) {
-      animateCssHandler ($card.filter (':first-child'), 'backInLeft');
-      animateCssHandler ($card.filter (':last-child'), 'backInRight');
-      animationTimer ($card.filter (':nth-child(2)'), 'zoomIn', 600);
+      animateHandler ($card.filter (':first-child'), 'backInLeft');
+      animateHandler ($card.filter (':last-child'), 'backInRight');
+      animateTimer ($card.filter (':nth-child(2)'), 'zoomIn', 600);
     }
 
     // Animation for contact section.
-    if (trigger ($contact)) {
-      animateCssHandler ($('#contact .cardWrap'), 'flipInY');
-    }
+    if (trigger ($contact))
+      animateHandler ($('#contact .cardWrap'), 'flipInY');
   });
 });
