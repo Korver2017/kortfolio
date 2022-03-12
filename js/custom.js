@@ -2,7 +2,7 @@
 // Custom JavaScript
 jQuery (function () {
 
-  // Prepare variables
+  // Prepare variables.
   const $window = $(window)
       , $body = $('body')
       , $cover = $('#cover')
@@ -55,45 +55,42 @@ jQuery (function () {
 
     // Parallax effect for social icons.
     $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
+
+    // Pass DOM & `animate.css` class name to apply animation effect.
+    function animateHandler (dom, effect) {
+      dom.css ('opacity', 1).addClass (`animate__animated animate__${effect}`);
+    }
+
+    // Pass a limit time to trigger `animateHandler`.
+    function animateTimer (dom, effect, time) {
+      setTimeout (() => {
+        animateHandler (dom, effect);
+      }, time);
+    }
     
-    // Animation for introduction section.
+    // Animation for intro group.
     if (trigger ($intro)) {
 
-      setTimeout (function () {
-        $('.subheadingGroup1').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 0);
+      const $introGroup = $intro.find ('.intro-group');
 
-      setTimeout (function () {
-        $('.subheadingGroup2').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 300);
-
-      setTimeout (function () {
-        $('.subheadingGroup3').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 600);
-
-      setTimeout (function () {
-        $('.subheadingGroup4').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 900);
+      $introGroup.each (function (i) {
+        animateTimer ($(this), 'fadeInRight', 300 * i);
+      });
     }
     
     // Animation for skills section.
     if (trigger ($skills))
-      $('.dev-icons').css ('opacity', 1).addClass ('animate__animated animate__bounceInRight');
+      animateHandler ($('.dev-icons'), 'bounceInRight');
 
     // Animation for collection section.
     if (trigger ($collection)) {
-
-      $card.filter (':first-child').css ('opacity', 1).addClass ('animate__animated animate__backInLeft');
-      $card.filter (':last-child').css ('opacity', 1).addClass ('animate__animated animate__backInRight');
-
-      setTimeout (function () {
-        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animate__animated animate__zoomIn');
-      }, 600);
+      animateHandler ($card.filter (':first-child'), 'backInLeft');
+      animateHandler ($card.filter (':last-child'), 'backInRight');
+      animateTimer ($card.filter (':nth-child(2)'), 'zoomIn', 600);
     }
 
     // Animation for contact section.
-    if (trigger ($contact)) {
-      $('#contact .cardWrap').css ('opacity', 1).addClass ('animate__animated animate__flipInY');
-    }
+    if (trigger ($contact))
+      animateHandler ($('#contact .cardWrap'), 'flipInY');
   });
 });

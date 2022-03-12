@@ -352,23 +352,7 @@ nav:before {
   background-color: #0077AE;
 }
 
-.subheadingGroup1 {
-  opacity: 0;
-}
-
-.subheadingGroup2 {
-  opacity: 0;
-}
-
-.subheadingGroup3 {
-  opacity: 0;
-}
-
-.subheadingGroup4 {
-  opacity: 0;
-}
-
-.subheadingGroup5 {
+.intro-group {
   opacity: 0;
 }
 
