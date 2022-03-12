@@ -56,10 +56,15 @@ jQuery (function () {
     // Parallax effect for social icons.
     $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
 
+    // Pass DOM & class name to apply animation effect.
+    function animateCssHandler (dom, effect) {
+      dom.css ('opacity', 1).addClass (`animate__animated animate__${effect}`);
+    }
+
     // Pass DOM & timeout to apply animation effect.
-    function animationTimer (dom, time) {
+    function animationTimer (dom, effect, time) {
       setTimeout (() => {
-        dom.css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
+        animateCssHandler (dom, effect);
       }, time);
     }
     
@@ -69,13 +74,8 @@ jQuery (function () {
       const $introGroup = $intro.find ('.intro-group');
 
       $introGroup.each (function (i) {
-        animationTimer ($(this), 300 * i);
+        animationTimer ($(this), 'fadeInRight', 300 * i);
       });
-    }
-
-    
-    function animateCssHandler (dom, effect) {
-      dom.css ('opacity', 1).addClass (`animate__animated animate__${effect}`);
     }
     
     // Animation for skills section.
@@ -84,13 +84,9 @@ jQuery (function () {
 
     // Animation for collection section.
     if (trigger ($collection)) {
-
       animateCssHandler ($card.filter (':first-child'), 'backInLeft');
       animateCssHandler ($card.filter (':last-child'), 'backInRight');
-
-      setTimeout (function () {
-        $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animate__animated animate__zoomIn');
-      }, 600);
+      animationTimer ($card.filter (':nth-child(2)'), 'zoomIn', 600);
     }
 
     // Animation for contact section.
