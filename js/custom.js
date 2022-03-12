@@ -2,7 +2,7 @@
 // Custom JavaScript
 jQuery (function () {
 
-  // Prepare variables
+  // Prepare variables.
   const $window = $(window)
       , $body = $('body')
       , $cover = $('#cover')
@@ -55,25 +55,22 @@ jQuery (function () {
 
     // Parallax effect for social icons.
     $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
+
+    function animationTimer (dom, time) {
+
+      setTimeout (() => {
+        dom.css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
+      }, time);
+    }
     
     // Animation for introduction section.
     if (trigger ($intro)) {
 
-      setTimeout (function () {
-        $('.subheadingGroup1').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 0);
+      const $introGroup = $intro.find ('.intro-group');
 
-      setTimeout (function () {
-        $('.subheadingGroup2').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 300);
-
-      setTimeout (function () {
-        $('.subheadingGroup3').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 600);
-
-      setTimeout (function () {
-        $('.subheadingGroup4').css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
-      }, 900);
+      $introGroup.each (function (i) {
+        animationTimer ($(this), 300 * i);
+      });
     }
     
     // Animation for skills section.
