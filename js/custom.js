@@ -56,14 +56,14 @@ jQuery (function () {
     // Parallax effect for social icons.
     $('.social-icons').css ({'transform': `translateY(${($moveUnit / 5)}vh)`});
 
+    // Pass DOM & timeout to apply animation effect.
     function animationTimer (dom, time) {
-
       setTimeout (() => {
         dom.css ('opacity', 1).addClass ('animate__animated animate__fadeInRight');
       }, time);
     }
     
-    // Animation for introduction section.
+    // Animation for intro group.
     if (trigger ($intro)) {
 
       const $introGroup = $intro.find ('.intro-group');
