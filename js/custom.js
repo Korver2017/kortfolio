@@ -72,16 +72,21 @@ jQuery (function () {
         animationTimer ($(this), 300 * i);
       });
     }
+
+    
+    function animateCssHandler (dom, effect) {
+      dom.css ('opacity', 1).addClass (`animate__animated animate__${effect}`);
+    }
     
     // Animation for skills section.
     if (trigger ($skills))
-      $('.dev-icons').css ('opacity', 1).addClass ('animate__animated animate__bounceInRight');
+      animateCssHandler ($('.dev-icons'), 'bounceInRight');
 
     // Animation for collection section.
     if (trigger ($collection)) {
 
-      $card.filter (':first-child').css ('opacity', 1).addClass ('animate__animated animate__backInLeft');
-      $card.filter (':last-child').css ('opacity', 1).addClass ('animate__animated animate__backInRight');
+      animateCssHandler ($card.filter (':first-child'), 'backInLeft');
+      animateCssHandler ($card.filter (':last-child'), 'backInRight');
 
       setTimeout (function () {
         $card.filter (':nth-child(2)').css ('opacity', 1).addClass ('animate__animated animate__zoomIn');
@@ -90,7 +95,7 @@ jQuery (function () {
 
     // Animation for contact section.
     if (trigger ($contact)) {
-      $('#contact .cardWrap').css ('opacity', 1).addClass ('animate__animated animate__flipInY');
+      animateCssHandler ($('#contact .cardWrap'), 'flipInY');
     }
   });
 });
