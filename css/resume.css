@@ -295,6 +295,17 @@ h3 {
 .switcher.active:before {
   left: 25px;
 }
+@media screen and (max-width: 991px) {
+  .switcher {
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main {
+    margin-left: 0 !important;
+  }
+}
 
 #sideNav {
   transition: left 1s;
@@ -302,6 +313,13 @@ h3 {
   top: -10vh;
   left: -40vw;
   transform: rotate(-3deg);
+}
+@media screen and (max-width: 991px) {
+  #sideNav {
+    top: 0;
+    height: 54px;
+    transform: rotate(0);
+  }
 }
 #sideNav:before {
   position: absolute;
@@ -314,6 +332,11 @@ h3 {
 #sideNav.navShow {
   left: -1.5vw;
 }
+@media screen and (max-width: 991px) {
+  #sideNav.navShow {
+    left: 0;
+  }
+}
 #sideNav .navbarContent {
   text-align: center;
   position: fixed;
@@ -325,8 +348,37 @@ h3 {
   height: 100vh;
   transform: rotate(3deg);
 }
-#sideNav .navbar-brand .img-profile:hover {
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent {
+    transform: rotate(0);
+    width: 100%;
+    margin-left: 0 !important;
+    height: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-brand {
+    margin-left: 0;
+  }
+}
+#sideNav .navbarContent .navbar-brand .img-profile:hover {
   border-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-nav, #sideNav .navbarContent .navbar-toggler {
+    background-color: #3066be;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-nav:focus, #sideNav .navbarContent .navbar-toggler:focus {
+    outline: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-collapse {
+    transition: none;
+  }
 }
 
 #cover .email {
@@ -374,10 +426,20 @@ h3 {
   text-transform: initial;
   font-size: 1.15rem;
 }
-#collection .card {
+@media screen and (max-width: 991px) {
+  #collection .cardWrap {
+    flex-wrap: wrap;
+  }
+}
+#collection .cardWrap .card {
   margin-right: 30px;
   opacity: 0;
   transition: opacity 0.5s;
+}
+@media screen and (max-width: 991px) {
+  #collection .cardWrap .card {
+    margin-top: 30px;
+  }
 }
 
 #contact .cardWrap {

@@ -142,6 +142,14 @@ h3 {
   &.active:before {
     left: 25px;
   }
+  @media screen and (max-width: 991px) {
+    top: 100px;
+  }
+}
+.main {
+  @media screen and (max-width: 991px) {
+    margin-left: 0 !important;
+  }
 }
 #sideNav {
   transition: left 1s;
@@ -151,6 +159,12 @@ h3 {
   // padding: relative;
   // left: -10vw;
   transform: rotate(-3deg);
+  @media screen and (max-width: 991px) {
+    // left: 0;
+    top: 0;
+    height: 54px;
+    transform: rotate(0);
+  }
   &:before {
     position: absolute;
     content: '';
@@ -161,6 +175,9 @@ h3 {
   }
   &.navShow {
     left: -1.5vw;
+    @media screen and (max-width: 991px) {
+      left: 0;
+    }
   }
   .navbarContent {
     text-align: center;
@@ -172,9 +189,36 @@ h3 {
     width: 17rem;
     height: 100vh;
     transform: rotate(3deg);
-  }
-  .navbar-brand .img-profile:hover {
-    border-color: rgba(255,255,255,.5);
+    @media screen and (max-width: 991px) {
+      transform: rotate(0);
+      width: 100%;
+      margin-left: 0 !important;
+      height: auto;
+    }
+    .navbar-brand {
+      @media screen and (max-width: 991px) {
+        margin-left: 0;
+      }
+      .img-profile:hover {
+        border-color: rgba(255,255,255,.5);
+      }
+    }
+    .navbar-nav, .navbar-toggler {
+      @media screen and (max-width: 991px) {
+        background-color: #3066be;
+        border-radius: 0;
+      }
+      &:focus {
+        @media screen and (max-width: 991px) {
+          outline: auto;
+        }
+      }
+    }
+    .navbar-collapse {
+      @media screen and (max-width: 991px) {
+        transition: none;
+      }
+    }
   }
 }
 #cover {
@@ -230,16 +274,27 @@ h3 {
     text-transform: initial;
     font-size: 1.15rem;
   }
-  .card {
-    margin-right: 30px;
-    opacity: 0;
-    transition: opacity .5s;
+  .cardWrap {
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+    .card {
+      margin-right: 30px;
+      opacity: 0;
+      transition: opacity .5s;
+      @media screen and (max-width: 991px) {
+        margin-top: 30px;
+      }
+    }
   }
 }
 #contact .cardWrap {
   justify-content: center;
   opacity: 0;
   transition: opacity .5s;
+  @media screen and (max-width: 991px) {
+    // flex-wrap: wrap;
+  }
   .name-card {
     letter-spacing: 2px;
     background: #fff;
