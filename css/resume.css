@@ -170,80 +170,83 @@ body {
   transition: all 1s;
   overflow-x: hidden;
 }
+body.show {
+  opacity: 1;
+}
 
-body.nightMode {
+body.dark-mode {
   background-color: #44423F;
 }
-body.nightMode h1 {
+body.dark-mode h1 {
   color: #98C8B2 !important;
 }
-body.nightMode h1 span {
+body.dark-mode h1 span {
   color: #c3e1f3 !important;
 }
-body.nightMode h2 {
+body.dark-mode h2 {
   color: #c3e1f3 !important;
 }
-body.nightMode .toggleButton {
+body.dark-mode .switcher {
   background-color: #00151f;
   border-color: #fff;
 }
-body.nightMode .toggleButton p {
+body.dark-mode .switcher p {
   color: #c3e1f3;
 }
-body.nightMode .toggleButton:before {
+body.dark-mode .switcher:before {
   background-color: #fff;
 }
-body.nightMode nav:before, body.nightMode #sideNav {
+body.dark-mode nav:before, body.dark-mode #sideNav {
   background-color: #252423 !important;
 }
-body.nightMode #cover h3, body.nightMode #cover p {
+body.dark-mode #cover h3, body.dark-mode #cover p {
   color: #c3e1f3 !important;
 }
-body.nightMode #cover .email {
+body.dark-mode #cover .email {
   color: #c3e1f3;
 }
-body.nightMode #cover .social-icons a {
+body.dark-mode #cover .social-icons a {
   background-color: #5c666f;
 }
-body.nightMode #introduction ul li {
+body.dark-mode #introduction ul li {
   color: #e6e6e6;
 }
-body.nightMode #skills .subheading {
+body.dark-mode #skills .subheading {
   color: #c3e1f3;
 }
-body.nightMode #skills .dev-icons i:hover {
+body.dark-mode #skills .dev-icons i:hover {
   color: #e6e6e6;
 }
-body.nightMode #collection .card {
+body.dark-mode #collection .card {
   background-color: #252423;
 }
-body.nightMode #collection .card h4, body.nightMode #collection .card h5 {
+body.dark-mode #collection .card h4, body.dark-mode #collection .card h5 {
   color: #c3e1f3;
 }
-body.nightMode #collection .card p {
+body.dark-mode #collection .card p {
   color: #e6e6e6;
 }
-body.nightMode #collection .card .btn {
+body.dark-mode #collection .card .btn {
   color: #c3e1f3;
   border-color: #c3e1f3;
 }
-body.nightMode #collection .card .btn:hover {
+body.dark-mode #collection .card .btn:hover {
   color: #252423;
   background-color: #c3e1f3;
 }
-body.nightMode #contact .name-card {
+body.dark-mode #contact .name-card {
   background: #252423;
 }
-body.nightMode #contact .name-card h4 {
+body.dark-mode #contact .name-card h4 {
   color: #95A1A8;
 }
-body.nightMode #contact .name-card p {
+body.dark-mode #contact .name-card p {
   color: #95A1A8;
 }
-body.nightMode #contact .name-card:hover {
+body.dark-mode #contact .name-card:hover {
   box-shadow: 0 30px 70px rgba(145, 145, 145, 0.3);
 }
-body.nightMode #contact .name-card .github:hover {
+body.dark-mode #contact .name-card .github:hover {
   border: 1px solid #95A1A8;
 }
 
@@ -259,7 +262,7 @@ h3 {
   color: #6d9dc5;
 }
 
-.toggleButton {
+.switcher {
   position: fixed;
   top: 40px;
   right: 50px;
@@ -270,8 +273,9 @@ h3 {
   cursor: pointer;
   border-radius: 20px;
   transition: 0.5s;
+  z-index: 99;
 }
-.toggleButton:before {
+.switcher:before {
   content: "";
   position: absolute;
   top: 1px;
@@ -282,24 +286,25 @@ h3 {
   border-radius: 50%;
   transition: 0.5s;
 }
-.toggleButton p {
+.switcher p {
   position: absolute;
   width: 200px;
   top: 20px;
-  right: -50px;
+  right: -80px;
 }
-
-.toggleButton.active:before {
+.switcher.active:before {
   left: 25px;
 }
-
-.email {
-  font-size: 1.5rem;
-  opacity: 0;
+@media screen and (max-width: 991px) {
+  .switcher {
+    top: 100px;
+  }
 }
 
-.show {
-  opacity: 1;
+@media screen and (max-width: 991px) {
+  .main {
+    margin-left: 0 !important;
+  }
 }
 
 #sideNav {
@@ -307,9 +312,32 @@ h3 {
   height: 140vh;
   top: -10vh;
   left: -40vw;
+  transform: rotate(-3deg);
 }
-
-.navbarContent {
+@media screen and (max-width: 991px) {
+  #sideNav {
+    top: 0;
+    height: 54px;
+    transform: rotate(0);
+  }
+}
+#sideNav:before {
+  position: absolute;
+  content: "";
+  width: 0.5vw;
+  height: 100%;
+  right: -0.8vw;
+  background-color: #3066be;
+}
+#sideNav.navShow {
+  left: -1.5vw;
+}
+@media screen and (max-width: 991px) {
+  #sideNav.navShow {
+    left: 0;
+  }
+}
+#sideNav .navbarContent {
   text-align: center;
   position: fixed;
   top: 0;
@@ -320,49 +348,182 @@ h3 {
   height: 100vh;
   transform: rotate(3deg);
 }
-
-nav {
-  padding: relative;
-  left: -10vw;
-  transform: rotate(-3deg);
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent {
+    transform: rotate(0);
+    width: 100%;
+    margin-left: 0 !important;
+    height: auto;
+  }
 }
-nav:before {
-  position: absolute;
-  content: "";
-  width: 0.5vw;
-  height: 100%;
-  right: -0.8vw;
-  background-color: #3066be;
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-brand {
+    margin-left: 0;
+  }
+}
+#sideNav .navbarContent .navbar-brand .img-profile:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-nav, #sideNav .navbarContent .navbar-toggler {
+    background-color: #3066be;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-nav:focus, #sideNav .navbarContent .navbar-toggler:focus {
+    outline: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav .navbarContent .navbar-collapse {
+    transition: none;
+  }
 }
 
-#sideNav.navShow {
-  left: -1.5vw;
+#cover .email {
+  font-size: 1.5rem;
+  opacity: 0;
 }
-
+#cover .education {
+  margin-bottom: 2rem;
+}
 #cover .social-icons a {
   transition: transform 0.3s cubic-bezier(0, 1, 1, 1.3);
+  margin-right: 0.5rem;
 }
 #cover .social-icons a:hover {
   transform: scale(1.1);
 }
-#cover .social-icons a:first-child:hover {
+#cover .social-icons .github:hover {
   background-color: #2E2D2D;
 }
-#cover .social-icons a:nth-child(2):hover {
+#cover .social-icons .linkedin:hover {
   background-color: #0077AE;
 }
 
-.intro-group {
+#introduction .resume-item h3 {
+  text-transform: initial;
+}
+#introduction .resume-item ul li {
+  font-size: 1.2rem;
+}
+#introduction .resume-item .intro-group {
   opacity: 0;
 }
 
-.dev-icons {
+#skills .dev-icons {
   font-size: 4rem;
   opacity: 0;
   transition: opacity 0.5s;
 }
 
-.card {
+#collection h4 {
+  text-transform: initial;
+  font-size: 1.35rem;
+}
+#collection h5 {
+  text-transform: initial;
+  font-size: 1.15rem;
+}
+@media screen and (max-width: 991px) {
+  #collection .cardWrap {
+    flex-wrap: wrap;
+  }
+}
+#collection .cardWrap .card {
+  margin-right: 30px;
   opacity: 0;
   transition: opacity 0.5s;
+}
+@media screen and (max-width: 991px) {
+  #collection .cardWrap .card {
+    margin-top: 30px;
+  }
+}
+
+#contact .cardWrap {
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#contact .cardWrap .name-card {
+  letter-spacing: 2px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#contact .cardWrap .name-card:hover {
+  transform: translateY(-30px) scale(1.01);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+}
+#contact .cardWrap .name-card .info {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+#contact .cardWrap .name-card .info ul {
+  margin: 0;
+  padding: 0;
+}
+#contact .cardWrap .name-card .info ul li {
+  list-style: none;
+  float: left;
+}
+#contact .cardWrap .name-card .info ul a {
+  display: block;
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+#contact .cardWrap .name-card .info .avatar {
+  width: 200px;
+  height: 200px;
+  background-image: url("../images/avatar.jpg");
+  background-size: cover;
+  background-position: 0 30%;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#contact .cardWrap .name-card .info p {
+  margin-top: 20px;
+  color: #262626;
+}
+#contact .cardWrap .name-card span {
+  font-size: 1.2rem;
+  background: #e91e63;
+  color: #fff;
+  display: inline-flex;
+  padding: 4px 30px;
+  border-radius: 20px;
+}
+#contact .cardWrap .name-card .icon-links {
+  background: none;
+  padding: 4px;
+}
+#contact .cardWrap .name-card .icon-links li {
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  transition: transform 0.3s;
+}
+#contact .cardWrap .name-card .icon-links li:hover {
+  transform: scale(1.05);
+}
+#contact .cardWrap .name-card .icon-links .github:hover {
+  background-color: #2E2D2D;
+}
+#contact .cardWrap .name-card .icon-links .linkedin:hover {
+  background-color: #0077AE;
 }
