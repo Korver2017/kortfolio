@@ -1,3 +1,5 @@
+
+// Bootstrap Sass
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
@@ -5,12 +7,13 @@
 @import "resume-item.scss";
 @import "bootstrap-overrides.scss";
 
+// Custom CSS
 body {
   opacity: 0;
   transition: all 1s;
   overflow-x: hidden;
 }
-body.nightMode {
+body.dark-mode {
   background-color: #44423F;
   h1 {
     color: #98C8B2 !important;
@@ -21,7 +24,7 @@ body.nightMode {
   h2 {
     color: #c3e1f3 !important;
   }
-  .toggleButton {
+  .switcher {
     background-color: #00151f;
     border-color: #fff;
     p {
@@ -108,7 +111,7 @@ h3 {
   color: #6d9dc5;
 }
 
-.toggleButton {
+.switcher {
   position: fixed;
   top: 40px;
   right: 50px;
@@ -138,7 +141,7 @@ h3 {
   }
 }
 
-.toggleButton.active:before {
+.switcher.active:before {
   left: 25px;
 }
 

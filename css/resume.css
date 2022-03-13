@@ -171,79 +171,79 @@ body {
   overflow-x: hidden;
 }
 
-body.nightMode {
+body.dark-mode {
   background-color: #44423F;
 }
-body.nightMode h1 {
+body.dark-mode h1 {
   color: #98C8B2 !important;
 }
-body.nightMode h1 span {
+body.dark-mode h1 span {
   color: #c3e1f3 !important;
 }
-body.nightMode h2 {
+body.dark-mode h2 {
   color: #c3e1f3 !important;
 }
-body.nightMode .toggleButton {
+body.dark-mode .switcher {
   background-color: #00151f;
   border-color: #fff;
 }
-body.nightMode .toggleButton p {
+body.dark-mode .switcher p {
   color: #c3e1f3;
 }
-body.nightMode .toggleButton:before {
+body.dark-mode .switcher:before {
   background-color: #fff;
 }
-body.nightMode nav:before, body.nightMode #sideNav {
+body.dark-mode nav:before, body.dark-mode #sideNav {
   background-color: #252423 !important;
 }
-body.nightMode #cover h3, body.nightMode #cover p {
+body.dark-mode #cover h3, body.dark-mode #cover p {
   color: #c3e1f3 !important;
 }
-body.nightMode #cover .email {
+body.dark-mode #cover .email {
   color: #c3e1f3;
 }
-body.nightMode #cover .social-icons a {
+body.dark-mode #cover .social-icons a {
   background-color: #5c666f;
 }
-body.nightMode #introduction ul li {
+body.dark-mode #introduction ul li {
   color: #e6e6e6;
 }
-body.nightMode #skills .subheading {
+body.dark-mode #skills .subheading {
   color: #c3e1f3;
 }
-body.nightMode #skills .dev-icons i:hover {
+body.dark-mode #skills .dev-icons i:hover {
   color: #e6e6e6;
 }
-body.nightMode #collection .card {
+body.dark-mode #collection .card {
   background-color: #252423;
 }
-body.nightMode #collection .card h4, body.nightMode #collection .card h5 {
+body.dark-mode #collection .card h4, body.dark-mode #collection .card h5 {
   color: #c3e1f3;
 }
-body.nightMode #collection .card p {
+body.dark-mode #collection .card p {
   color: #e6e6e6;
 }
-body.nightMode #collection .card .btn {
+body.dark-mode #collection .card .btn {
   color: #c3e1f3;
   border-color: #c3e1f3;
 }
-body.nightMode #collection .card .btn:hover {
+body.dark-mode #collection .card .btn:hover {
   color: #252423;
   background-color: #c3e1f3;
 }
-body.nightMode #contact .name-card {
+body.dark-mode #contact .name-card {
   background: #252423;
 }
-body.nightMode #contact .name-card h4 {
+body.dark-mode #contact .name-card h4 {
   color: #95A1A8;
 }
-body.nightMode #contact .name-card p {
+body.dark-mode #contact .name-card p {
   color: #95A1A8;
 }
-body.nightMode #contact .name-card:hover {
+body.dark-mode #contact .name-card:hover {
   box-shadow: 0 30px 70px rgba(145, 145, 145, 0.3);
 }
-body.nightMode #contact .name-card .github:hover {
+body.dark-mode #contact .name-card .github:hover {
   border: 1px solid #95A1A8;
 }
 
@@ -259,7 +259,7 @@ h3 {
   color: #6d9dc5;
 }
 
-.toggleButton {
+.switcher {
   position: fixed;
   top: 40px;
   right: 50px;
@@ -271,7 +271,7 @@ h3 {
   border-radius: 20px;
   transition: 0.5s;
 }
-.toggleButton:before {
+.switcher:before {
   content: "";
   position: absolute;
   top: 1px;
@@ -282,14 +282,14 @@ h3 {
   border-radius: 50%;
   transition: 0.5s;
 }
-.toggleButton p {
+.switcher p {
   position: absolute;
   width: 200px;
   top: 20px;
   right: -50px;
 }
 
-.toggleButton.active:before {
+.switcher.active:before {
   left: 25px;
 }
 

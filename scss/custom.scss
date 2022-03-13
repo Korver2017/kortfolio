@@ -19,11 +19,11 @@
     background-color: #0077AE;
   }
 }
-.toggleButton {
+.switcher {
   z-index: 99;
 }
 
-.toggleButton p {
+.switcher p {
   right: -80px;
 }
 #introduction {
@@ -193,7 +193,7 @@
     outline: auto;
   }
 
-  .toggleButton {
+  .switcher {
     top: 100px;
   }
 
