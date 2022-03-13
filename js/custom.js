@@ -14,9 +14,9 @@ jQuery (function () {
       ;
 
   // Toggle for light / dark mode.
-  $('.toggleButton').on ('click', function () {
+  $('.switcher').on ('click', function () {
     $(this).toggleClass ('active');
-    $body.toggleClass ('nightMode');
+    $body.toggleClass ('dark-mode');
   });
 
   $body.addClass ('show');

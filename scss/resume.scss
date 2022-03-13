@@ -1,3 +1,5 @@
+
+// Bootstrap Sass
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
@@ -5,12 +7,16 @@
 @import "resume-item.scss";
 @import "bootstrap-overrides.scss";
 
+// Custom CSS
 body {
   opacity: 0;
   transition: all 1s;
   overflow-x: hidden;
+  &.show {
+    opacity: 1;
+  }
 }
-body.nightMode {
+body.dark-mode {
   background-color: #44423F;
   h1 {
     color: #98C8B2 !important;
@@ -21,7 +27,7 @@ body.nightMode {
   h2 {
     color: #c3e1f3 !important;
   }
-  .toggleButton {
+  .switcher {
     background-color: #00151f;
     border-color: #fff;
     p {
@@ -95,20 +101,16 @@ body.nightMode {
     }
   }
 }
-
 h1 {
   opacity: 0;
 }
-
 h2 {
   color: #119da4;
 }
-
 h3 {
   color: #6d9dc5;
 }
-
-.toggleButton {
+.switcher {
   position: fixed;
   top: 40px;
   right: 50px;
@@ -119,6 +121,7 @@ h3 {
   cursor: pointer;
   border-radius: 20px;
   transition: .5s;
+  z-index: 99;
   &:before {
     content: '';
     position: absolute;
@@ -134,46 +137,34 @@ h3 {
     position: absolute;
     width: 200px;
     top: 20px;
-    right: -50px;
+    right: -80px;
+  }
+  &.active:before {
+    left: 25px;
+  }
+  @media screen and (max-width: 991px) {
+    top: 100px;
   }
 }
-
-.toggleButton.active:before {
-  left: 25px;
+.main {
+  @media screen and (max-width: 991px) {
+    margin-left: 0 !important;
+  }
 }
-
-.email {
-  font-size: 1.5rem;
-  opacity: 0;
-}
-
-.show {
-  opacity: 1;
-}
-
 #sideNav {
   transition: left 1s;
   height: 140vh;
   top: -10vh;
   left: -40vw;
-}
-
-.navbarContent {
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  width: 17rem;
-  height: 100vh;
-  transform: rotate(3deg);
-}
-
-nav {
-  padding: relative;
-  left: -10vw;
+  // padding: relative;
+  // left: -10vw;
   transform: rotate(-3deg);
+  @media screen and (max-width: 991px) {
+    // left: 0;
+    top: 0;
+    height: 54px;
+    transform: rotate(0);
+  }
   &:before {
     position: absolute;
     content: '';
@@ -182,36 +173,207 @@ nav {
     right: -.8vw;
     background-color: $primary;
   }
-}
-
-#sideNav.navShow {
-  left: -1.5vw;
-}
-
-#cover .social-icons a {
-  transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
-  &:hover {
-    transform: scale(1.1);
+  &.navShow {
+    left: -1.5vw;
+    @media screen and (max-width: 991px) {
+      left: 0;
+    }
   }
-  &:first-child:hover {
-    background-color: #2E2D2D;
-  }
-  &:nth-child(2):hover {
-    background-color: #0077AE;
+  .navbarContent {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+    transform: rotate(3deg);
+    @media screen and (max-width: 991px) {
+      transform: rotate(0);
+      width: 100%;
+      margin-left: 0 !important;
+      height: auto;
+    }
+    .navbar-brand {
+      @media screen and (max-width: 991px) {
+        margin-left: 0;
+      }
+      .img-profile:hover {
+        border-color: rgba(255,255,255,.5);
+      }
+    }
+    .navbar-nav, .navbar-toggler {
+      @media screen and (max-width: 991px) {
+        background-color: #3066be;
+        border-radius: 0;
+      }
+      &:focus {
+        @media screen and (max-width: 991px) {
+          outline: auto;
+        }
+      }
+    }
+    .navbar-collapse {
+      @media screen and (max-width: 991px) {
+        transition: none;
+      }
+    }
   }
 }
-
-.intro-group {
-  opacity: 0;
+#cover {
+  .email {
+    font-size: 1.5rem;
+    opacity: 0;
+  }
+  .education {
+    margin-bottom: 2rem;
+  }
+  .social-icons {
+    a {
+      transition: transform .3s cubic-bezier(0, 1, 1, 1.3);
+      margin-right: 0.5rem;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .github:hover {
+      background-color: #2E2D2D;
+    }
+    .linkedin:hover {
+      background-color: #0077AE;
+    }
+  }
 }
-
-.dev-icons {
-  font-size: 4rem;
+#introduction {
+  .resume-item {
+    h3 {
+      text-transform: initial;
+    }
+    ul li {
+      font-size: 1.2rem;
+    }
+    .intro-group {
+      opacity: 0;
+    }
+  }
+}
+#skills {
+  .dev-icons {
+    font-size: 4rem;
+    opacity: 0;
+    transition: opacity .5s;
+  }
+}
+#collection {
+  h4 {
+    text-transform: initial;
+    font-size: 1.35rem;
+  }
+  h5 {
+    text-transform: initial;
+    font-size: 1.15rem;
+  }
+  .cardWrap {
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+    .card {
+      margin-right: 30px;
+      opacity: 0;
+      transition: opacity .5s;
+      @media screen and (max-width: 991px) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+#contact .cardWrap {
+  justify-content: center;
   opacity: 0;
   transition: opacity .5s;
-}
-
-.card {
-  opacity: 0;
-  transition: opacity .5s;
+  @media screen and (max-width: 991px) {
+    // flex-wrap: wrap;
+  }
+  .name-card {
+    letter-spacing: 2px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    transition: 0.5s;
+    &:hover {
+      transform: translateY(-30px) scale(1.01);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .2);
+    }
+    .info {
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          float: left;
+        }
+        a {
+          display: block;
+          color: #fff;
+          margin: 0 10px;
+          font-size: 20px;
+          transition: 0.5s;
+          text-align: center;
+        }
+      }
+      .avatar {
+        width: 200px;
+        height: 200px;
+        background-image: url("../images/avatar.jpg");
+        background-size: cover;
+        background-position: 0 30%;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      p {
+        margin-top: 20px;
+        color: #262626;
+      }
+    }
+    span {
+      font-size: 1.2rem;
+      background: #e91e63;
+      color: #fff;
+      display: inline-flex;
+      padding: 4px 30px;
+      border-radius: 20px;
+    }
+    .icon-links {
+      background: none;
+      padding: 4px;
+      li {
+        height: 3.5rem;
+        width: 3.5rem;
+        background-color: #495057;
+        color: #fff !important;
+        border-radius: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        transition: transform .3s;
+    
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+      .github:hover {
+        background-color: #2E2D2D;
+      }
+      .linkedin:hover {
+        background-color: #0077AE;
+      }
+    }
+  }
 }
