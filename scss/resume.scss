@@ -27,6 +27,9 @@ body.dark-mode {
   h2 {
     color: #c3e1f3 !important;
   }
+  hr {
+    border-top: 1px solid rgba(255,255,255,.2);
+  }
   .switcher {
     background-color: #00151f;
     border-color: #fff;
@@ -86,17 +89,19 @@ body.dark-mode {
   #contact {
     .name-card {
       background: #252423;
-      h4 {
-        color: #95A1A8;
-      }
-      p {
-        color: #95A1A8;
-      }
-      &:hover {
-        box-shadow: 0 30px 70px rgba(145, 145, 145, .3);
-      }
-      .github:hover {
-        border: 1px solid #95A1A8;
+      .info {
+        h4 {
+          color: #95A1A8;
+        }
+        p {
+          color: #95A1A8;
+        }
+        &:hover {
+          box-shadow: 0 30px 70px rgba(145, 145, 145, .3);
+        }
+        .github:hover {
+          border: 1px solid #95A1A8;
+        }
       }
     }
   }
@@ -341,38 +346,38 @@ h3 {
         margin-top: 20px;
         color: #262626;
       }
-    }
-    span {
-      font-size: 1.2rem;
-      background: #e91e63;
-      color: #fff;
-      display: inline-flex;
-      padding: 4px 30px;
-      border-radius: 20px;
-    }
-    .icon-links {
-      background: none;
-      padding: 4px;
-      li {
-        height: 3.5rem;
-        width: 3.5rem;
-        background-color: #495057;
-        color: #fff !important;
-        border-radius: 100%;
-        text-align: center;
-        font-size: 1.5rem;
-        line-height: 3.5rem;
-        transition: transform .3s;
-    
-        &:hover {
-          transform: scale(1.05);
+      span {
+        font-size: 1.2rem;
+        background: #e91e63;
+        color: #fff;
+        display: inline-flex;
+        padding: 4px 30px;
+        border-radius: 20px;
+      }
+      .icon-links {
+        background: none;
+        padding: 4px;
+        li {
+          height: 3.5rem;
+          width: 3.5rem;
+          background-color: #495057;
+          color: #fff !important;
+          border-radius: 100%;
+          text-align: center;
+          font-size: 1.5rem;
+          line-height: 3.5rem;
+          transition: transform .3s;
+      
+          &:hover {
+            transform: scale(1.05);
+          }
         }
-      }
-      .github:hover {
-        background-color: #2E2D2D;
-      }
-      .linkedin:hover {
-        background-color: #0077AE;
+        .github:hover {
+          background-color: #2E2D2D;
+        }
+        .linkedin:hover {
+          background-color: #0077AE;
+        }
       }
     }
   }

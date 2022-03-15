@@ -186,6 +186,9 @@ body.dark-mode h1 span {
 body.dark-mode h2 {
   color: #c3e1f3 !important;
 }
+body.dark-mode hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 body.dark-mode .switcher {
   background-color: #00151f;
   border-color: #fff;
@@ -237,16 +240,16 @@ body.dark-mode #collection .card .btn:hover {
 body.dark-mode #contact .name-card {
   background: #252423;
 }
-body.dark-mode #contact .name-card h4 {
+body.dark-mode #contact .name-card .info h4 {
   color: #95A1A8;
 }
-body.dark-mode #contact .name-card p {
+body.dark-mode #contact .name-card .info p {
   color: #95A1A8;
 }
-body.dark-mode #contact .name-card:hover {
+body.dark-mode #contact .name-card .info:hover {
   box-shadow: 0 30px 70px rgba(145, 145, 145, 0.3);
 }
-body.dark-mode #contact .name-card .github:hover {
+body.dark-mode #contact .name-card .info .github:hover {
   border: 1px solid #95A1A8;
 }
 
@@ -495,7 +498,7 @@ h3 {
   margin-top: 20px;
   color: #262626;
 }
-#contact .cardWrap .name-card span {
+#contact .cardWrap .name-card .info span {
   font-size: 1.2rem;
   background: #e91e63;
   color: #fff;
@@ -503,11 +506,11 @@ h3 {
   padding: 4px 30px;
   border-radius: 20px;
 }
-#contact .cardWrap .name-card .icon-links {
+#contact .cardWrap .name-card .info .icon-links {
   background: none;
   padding: 4px;
 }
-#contact .cardWrap .name-card .icon-links li {
+#contact .cardWrap .name-card .info .icon-links li {
   height: 3.5rem;
   width: 3.5rem;
   background-color: #495057;
@@ -518,12 +521,12 @@ h3 {
   line-height: 3.5rem;
   transition: transform 0.3s;
 }
-#contact .cardWrap .name-card .icon-links li:hover {
+#contact .cardWrap .name-card .info .icon-links li:hover {
   transform: scale(1.05);
 }
-#contact .cardWrap .name-card .icon-links .github:hover {
+#contact .cardWrap .name-card .info .icon-links .github:hover {
   background-color: #2E2D2D;
 }
-#contact .cardWrap .name-card .icon-links .linkedin:hover {
+#contact .cardWrap .name-card .info .icon-links .linkedin:hover {
   background-color: #0077AE;
 }
