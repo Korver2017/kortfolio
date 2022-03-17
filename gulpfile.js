@@ -126,3 +126,24 @@ gulp.task('watchTask', function () {
 
 // Dev task
 gulp.task('dev', gulp.series('css', 'js', 'browserSync', 'watchTask'));
+
+// Build task
+gulp.task('build', function(done) {
+
+  gulp.src('./*.html')
+    .pipe(gulp.dest('./dist'))
+
+  gulp.src('./vendor/**')
+    .pipe(gulp.dest('./dist/vendor'))
+
+  gulp.src('./images/**')
+    .pipe(gulp.dest('./dist/images'))
+
+  gulp.src('./css/**')
+    .pipe(gulp.dest('./dist/css'))
+  
+  gulp.src('./js/**')
+    .pipe(gulp.dest('./dist/js'))
+
+  done()
+});
