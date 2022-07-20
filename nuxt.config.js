@@ -11,11 +11,27 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    script: [
+      {
+        // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
+      },
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+        href: 'https://cdnjs.cloudflare.com/ajax/libs/devicon/2.14.0/devicon.min.css',
+        href: 'https://fonts.googleapis.com/css?family=Roboto',
+        href: 'https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700',
+        href: 'https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i',
+        // href: "vendor/fontawesome-free/css/all.min.css"
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/scss/style.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],

@@ -1,5 +1,6 @@
 
 // Bootstrap Sass
+@import "~bootstrap/scss/bootstrap.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
@@ -9,7 +10,7 @@
 
 // Custom CSS
 body {
-  opacity: 0;
+  // opacity: 0;
   transition: all 1s;
   overflow-x: hidden;
   &.show {
@@ -159,13 +160,10 @@ h3 {
 #sideNav {
   transition: left 1s;
   height: 140vh;
-  top: -10vh;
-  left: -40vw;
-  // padding: relative;
-  // left: -10vw;
+  // top: -10vh;
+  // left: -40vw;
   transform: rotate(-3deg);
   @media screen and (max-width: 991px) {
-    // left: 0;
     top: 0;
     height: 54px;
     transform: rotate(0);
