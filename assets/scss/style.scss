@@ -1,6 +1,6 @@
 
 // Bootstrap Sass
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
@@ -160,8 +160,9 @@ h3 {
 #sideNav {
   transition: left 1s;
   height: 140vh;
-  // top: -10vh;
+  top: -10vh;
   // left: -40vw;
+  left: -1.5vw;
   transform: rotate(-3deg);
   @media screen and (max-width: 991px) {
     top: 0;

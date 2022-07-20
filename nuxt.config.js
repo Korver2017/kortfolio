@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,30 +13,53 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    script: [
-      {
-        // src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
-      },
-    ],
+    script: [],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css',
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://cdnjs.cloudflare.com/ajax/libs/devicon/2.14.0/devicon.min.css',
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto',
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700',
+      },
+      {
+        rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i',
-        // href: "vendor/fontawesome-free/css/all.min.css"
       },
     ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/scss/style.scss'],
+  css: [
+    '@/assets/vendors/fontawesome-free/css/all.min.css',
+    '@/assets/vendors/bootstrap/css/bootstrap.min.css',
+    '@/assets/scss/style.scss',
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/assets/vendors/jquery/jquery.min.js', mode: 'client' },
+    {
+      src: '~/assets/vendors/bootstrap/js/bootstrap.bundle.min.js',
+      mode: 'client',
+    },
+    {
+      src: '~/assets/vendors/jquery-easing/jquery.easing.min.js',
+      mode: 'client',
+    },
+    { src: '~/assets/vendors/js/resume.min.js', mode: 'client' },
+    { src: '~/assets/vendors/js/custom.js', mode: 'client' },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,5 +80,14 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    vendor: ['jquery'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery',
+      }),
+    ],
+  },
 }
