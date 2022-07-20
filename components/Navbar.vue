@@ -30,23 +30,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#cover">Cover</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#introduction"
-                >Introduction</a
+              <nuxt-link class="nav-link js-scroll-trigger" to="/"
+                >Cover</nuxt-link
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+              <nuxt-link class="nav-link js-scroll-trigger" to="introduction"
+                >Introduction</nuxt-link
+              >
             </li>
+
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#collection"
-                >Collection</a
+              <nuxt-link class="nav-link js-scroll-trigger" to="skills"
+                >Skills</nuxt-link
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <nuxt-link class="nav-link js-scroll-trigger" to="collection"
+                >Collection</nuxt-link
+              >
+            </li>
+            <li class="nav-item">
+              <nuxt-link class="nav-link js-scroll-trigger" to="contact"
+                >Contact</nuxt-link
+              >
             </li>
           </ul>
         </div>
@@ -62,4 +69,10 @@
 
 <script></script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.navbar-dark {
+  .nuxt-link-exact-active {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+</style>
