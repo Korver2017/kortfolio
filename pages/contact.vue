@@ -2,7 +2,11 @@
   <!-- Main content -->
   <div class="main container-fluid ml-5 p-0">
     <!-- Contact section -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+    <section
+      :class="{ display: isTriggered }"
+      class="resume-section p-3 p-lg-5 d-flex flex-column"
+      id="contact"
+    >
       <div class="my-auto">
         <h2 class="text-primary mb-5">Contact Me</h2>
 
@@ -36,6 +40,19 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'contact',
+  data() {
+    return {}
+  },
+  computed: {
+    isTriggered() {
+      return this.$store.getters.isTriggered
+    },
+  },
+  mounted() {},
+}
+</script>
 
 <style scoped></style>

@@ -41,25 +41,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/vendors/fontawesome-free/css/all.min.css',
-    '@/assets/vendors/bootstrap/css/bootstrap.min.css',
+    '@/assets/fontawesome-free/css/all.min.css',
+    '@/assets/bootstrap/css/bootstrap.min.css',
     '@/assets/scss/style.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/assets/vendors/jquery/jquery.min.js', mode: 'client' },
-    {
-      src: '~/assets/vendors/bootstrap/js/bootstrap.bundle.min.js',
-      mode: 'client',
-    },
-    {
-      src: '~/assets/vendors/jquery-easing/jquery.easing.min.js',
-      mode: 'client',
-    },
-    { src: '~/assets/vendors/js/resume.min.js', mode: 'client' },
-    { src: '~/assets/vendors/js/custom.js', mode: 'client' },
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -80,14 +68,5 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    vendor: ['jquery'],
-    plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-      }),
-    ],
-  },
+  build: {},
 }

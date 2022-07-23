@@ -7,10 +7,10 @@
 @import "nav.scss";
 @import "resume-item.scss";
 @import "bootstrap-overrides.scss";
+@import "nuxt.scss";
 
 // Custom CSS
 body {
-  // opacity: 0;
   transition: all 1s;
   overflow-x: hidden;
   &.show {
@@ -44,7 +44,7 @@ body.dark-mode {
   nav:before, #sideNav {
     background-color: #252423 !important;
   }
-  #cover {
+  #home {
     h3, p {
       color: #c3e1f3 !important;
     }
@@ -107,9 +107,6 @@ body.dark-mode {
     }
   }
 }
-h1 {
-  // opacity: 0;
-}
 h2 {
   color: #119da4;
 }
@@ -161,8 +158,7 @@ h3 {
   transition: left 1s;
   height: 140vh;
   top: -10vh;
-  // left: -40vw;
-  left: -1.5vw;
+  left: -30vw;
   transform: rotate(-3deg);
   @media screen and (max-width: 991px) {
     top: 0;
@@ -225,10 +221,10 @@ h3 {
     }
   }
 }
-#cover {
+#home {
   .email {
     font-size: 1.5rem;
-    opacity: 0;
+    // opacity: 0;
   }
   .education {
     margin-bottom: 2rem;
@@ -258,14 +254,14 @@ h3 {
       font-size: 1.2rem;
     }
     .intro-group {
-      opacity: 0;
+      // opacity: 0;
     }
   }
 }
 #skills {
   .dev-icons {
     font-size: 4rem;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity .5s;
   }
 }
@@ -284,7 +280,7 @@ h3 {
     }
     .card {
       margin-right: 30px;
-      opacity: 0;
+      // opacity: 0;
       transition: opacity .5s;
       @media screen and (max-width: 991px) {
         margin-top: 30px;
@@ -294,7 +290,7 @@ h3 {
 }
 #contact .cardWrap {
   justify-content: center;
-  opacity: 0;
+  // opacity: 0;
   transition: opacity .5s;
   @media screen and (max-width: 991px) {
     // flex-wrap: wrap;

@@ -2,11 +2,14 @@
   <div id="page-top">
     <!-- Navbar -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      :class="[
+        'navbar navbar-expand-lg navbar-dark bg-primary fixed-top',
+        { navShow: isNavShown },
+      ]"
       id="sideNav"
     >
       <div class="navbarContent ml-3">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <nuxt-link class="navbar-brand" to="/">
           <span class="d-block d-lg-none">Korver Huang</span>
           <span class="d-none d-lg-block">
             <img
@@ -15,7 +18,7 @@
               alt=""
             />
           </span>
-        </a>
+        </nuxt-link>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,30 +33,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <nuxt-link class="nav-link js-scroll-trigger" to="/"
-                >Cover</nuxt-link
-              >
+              <nuxt-link class="nav-link" to="/">Home</nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link js-scroll-trigger" to="introduction"
+              <nuxt-link class="nav-link" to="introduction"
                 >Introduction</nuxt-link
               >
             </li>
 
             <li class="nav-item">
-              <nuxt-link class="nav-link js-scroll-trigger" to="skills"
-                >Skills</nuxt-link
-              >
+              <nuxt-link class="nav-link" to="skills">Skills</nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link js-scroll-trigger" to="collection"
-                >Collection</nuxt-link
-              >
+              <nuxt-link class="nav-link" to="collection">Collection</nuxt-link>
             </li>
             <li class="nav-item">
-              <nuxt-link class="nav-link js-scroll-trigger" to="contact"
-                >Contact</nuxt-link
-              >
+              <nuxt-link class="nav-link" to="contact">Contact</nuxt-link>
             </li>
           </ul>
         </div>
@@ -61,13 +56,42 @@
     </nav>
 
     <!-- Light / Dark mode toggle button -->
-    <div class="switcher">
+    <div
+      @click="toggleDarkMode"
+      class="switcher"
+      :class="{ active: isDarkMode }"
+    >
       <p>Light / Dark Mode</p>
     </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'navbar',
+  data() {
+    return {
+      isNavShown: false,
+    }
+  },
+  computed: {
+    isDarkMode() {
+      return this.$store.getters.isDarkMode
+    },
+  },
+  mounted() {
+    this.isNavShown = true
+    setTimeout(() => {
+      this.$store.dispatch('triggerAnimation', true)
+    }, 600)
+  },
+  methods: {
+    toggleDarkMode() {
+      this.$store.dispatch('toggleDarkMode')
+    },
+  },
+}
+</script>
 
 <style scoped lang="scss">
 .navbar-dark {

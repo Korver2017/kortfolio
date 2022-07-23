@@ -4,6 +4,7 @@
     <!-- Works collection -->
     <section
       class="resume-section p-3 p-lg-5 d-flex flex-column"
+      :class="{ display: isTriggered }"
       id="collection"
     >
       <div class="my-auto">
@@ -101,6 +102,19 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'collection',
+  data() {
+    return {}
+  },
+  computed: {
+    isTriggered() {
+      return this.$store.getters.isTriggered
+    },
+  },
+  mounted() {},
+}
+</script>
 
 <style scoped></style>

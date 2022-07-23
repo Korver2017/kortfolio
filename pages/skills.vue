@@ -2,7 +2,11 @@
   <!-- Main content -->
   <div class="main container-fluid ml-5 p-0">
     <!-- Skills section -->
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+    <section
+      class="resume-section p-3 p-lg-5 d-flex flex-column"
+      :class="{ display: isTriggered }"
+      id="skills"
+    >
       <div class="my-auto">
         <h2 class="text-primary mb-5">Skills</h2>
 
@@ -61,6 +65,15 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'skills',
+  computed: {
+    isTriggered() {
+      return this.$store.getters.isTriggered
+    },
+  },
+}
+</script>
 
 <style scoped></style>

@@ -4,6 +4,7 @@
     <!-- Introduction section. -->
     <section
       class="resume-section p-3 p-lg-5 d-flex flex-row"
+      :class="{ display: isTriggered }"
       id="introduction"
     >
       <div class="my-auto">
@@ -77,6 +78,18 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {}
+  },
+  computed: {
+    isTriggered() {
+      return this.$store.getters.isTriggered
+    },
+  },
+  mounted() {},
+}
+</script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>
