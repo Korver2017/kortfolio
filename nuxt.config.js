@@ -1,5 +1,15 @@
 const webpack = require('webpack')
 
+// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/kortfolio/'
+        }
+      }
+    : {}
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -69,4 +79,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  ...routerBase
 }
