@@ -1,4 +1,4 @@
-# kortfolio
+# Kortfolio
 
 ## Build Setup
 
