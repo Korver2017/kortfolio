@@ -1,9 +1,7 @@
-<div align="center">
-  <h3 align="center">Kortfolio</h3>
-  <p align="center">
-    A simple portfolio about myself, Korver. I named it as <b>Kortfolio<b>.
-  </p>
-</div>
+# 📁 Kortfolio
+
+A simple portfolio about myself, Korver. I named it as Kortfolio.
+
 
 ## About The Project
 
@@ -27,6 +25,7 @@
     - [ ] Card position
     - [ ] Modify color/style
 - [ ] Connect GitHub API
+- [ ] And others...
 
 ## Build Setup
 
