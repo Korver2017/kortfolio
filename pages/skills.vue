@@ -13,53 +13,28 @@
         <div class="subheading mb-3">Programming Languages &amp; Tools</div>
 
         <!-- Skill icons -->
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-vuejs"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-jquery-plain-wordmark"></i>
-          </li>
-          <br />
+        <div class="icons-group my-4">
+          <span class="iconify" data-icon="logos:vue" />
+          <span class="iconify" data-icon="logos:vitejs" />
+          <span class="iconify" data-icon="logos:nuxt-icon" />
+        </div>
 
-          <li class="list-inline-item">
-            <i class="fab fa-sass"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-bootstrap-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-css3"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-html5"></i>
-          </li>
-          <br />
+        <div class="icons-group my-4">
+          <span class="iconify" data-icon="logos:javascript"></span>
+          <span class="iconify" data-icon="logos:sass"></span>
+          <span class="iconify" data-icon="logos:bootstrap"></span>
+          <span class="iconify" data-icon="logos:html-5"></span>
+          <span class="iconify" data-icon="logos:css-3"></span>
+        </div>
 
-          <li class="list-inline-item">
-            <i class="devicon-git-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-webpack-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-gulp-plain"></i>
-          </li>
-          <br />
-
-          <li class="list-inline-item">
-            <i class="devicon-vscode-plain"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-sourcetree-original"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicon-slack-plain"></i>
-          </li>
-        </ul>
+        <div class="icons-group my-4">
+          <span class="iconify" data-icon="logos:git-icon"></span>
+          <span class="iconify" data-icon="logos:github-icon"></span>
+          <span class="iconify" data-icon="logos:gitlab"></span>
+          <span class="iconify" data-icon="logos:sourcetree"></span>
+          <span class="iconify" data-icon="logos:gulp"></span>
+          <span class="iconify" data-icon="logos:slack-icon"></span>
+        </div>
       </div>
     </section>
   </div>
@@ -76,4 +51,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.iconify {
+  font-size: 3.3rem;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+</style>
