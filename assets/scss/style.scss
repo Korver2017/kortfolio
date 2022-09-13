@@ -280,10 +280,12 @@ h3 {
     }
     .card {
       margin-right: 30px;
-      // opacity: 0;
       transition: opacity .5s;
       @media screen and (max-width: 991px) {
-        margin-top: 30px;
+        // margin-top: 30px;
+        &:first-child {
+          margin-bottom: 30px;
+        }
       }
     }
   }
