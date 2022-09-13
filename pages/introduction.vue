@@ -7,7 +7,7 @@
       :class="{ display: isTriggered }"
       id="introduction"
     >
-      <div class="my-auto">
+      <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Introduction</h2>
         <div class="row">
           <!-- Relative working experience -->

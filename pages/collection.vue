@@ -7,7 +7,7 @@
       :class="{ display: isTriggered }"
       id="collection"
     >
-      <div class="my-auto">
+      <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Works Collection</h2>
         <div class="cardWrap d-flex flex-row">
           <div class="card col-lg-3 col-12">
