@@ -1,6 +1,6 @@
 <template>
   <!-- Main content -->
-  <div class="main container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-3 p-0">
     <!-- Skills section -->
     <section
       class="resume-section p-3 p-lg-5 d-flex flex-column"

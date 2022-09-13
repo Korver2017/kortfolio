@@ -1,6 +1,6 @@
 <template>
   <!-- Main content -->
-  <div class="main container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-3 p-0">
     <!-- Contact section -->
     <section
       :class="{ display: isTriggered }"

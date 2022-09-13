@@ -1,7 +1,7 @@
 <template>
   <Transition>
     <!-- Main content -->
-    <div class="main container-fluid ml-5 p-0">
+    <div class="main container-fluid ml-3 p-0">
       <!-- Home section -->
       <section
         :class="{ display: isTriggered }"
