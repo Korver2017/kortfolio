@@ -1,17 +1,17 @@
 <template>
   <!-- Main content -->
-  <div class="main container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-3 p-0">
     <!-- Introduction section. -->
     <section
       class="resume-section p-3 p-lg-5 d-flex flex-row"
       :class="{ display: isTriggered }"
       id="introduction"
     >
-      <div class="my-auto">
+      <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Introduction</h2>
         <div class="row">
           <!-- Relative working experience -->
-          <div class="resume-item col-6 d-flex flex-column flex-md-row mb-5">
+          <div class="resume-item col-md-6 d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-2">Front-End Working Experience</h3>
               <div class="intro-group">
@@ -30,7 +30,7 @@
           </div>
 
           <!-- Learning path -->
-          <div class="resume-item col-6 d-flex flex-column flex-md-row mb-5">
+          <div class="resume-item col-md-6 d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-2">Self-Learning to Code</h3>
               <div class="intro-group">
@@ -47,7 +47,7 @@
 
         <div class="row">
           <!-- Language -->
-          <div class="resume-item col-6 d-flex flex-column flex-md-row mb-5">
+          <div class="resume-item col-md-6 d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-2">TOEIC 870</h3>
               <div class="intro-group">
@@ -60,7 +60,7 @@
           </div>
 
           <!-- Education -->
-          <div class="resume-item col-6 d-flex flex-column flex-md-row mb-5">
+          <div class="resume-item col-md-6 d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-2">Master of Business Administration</h3>
               <div class="intro-group">

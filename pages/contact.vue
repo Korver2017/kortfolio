@@ -1,13 +1,13 @@
 <template>
   <!-- Main content -->
-  <div class="main container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-3 p-0">
     <!-- Contact section -->
     <section
       :class="{ display: isTriggered }"
       class="resume-section p-3 p-lg-5 d-flex flex-column"
       id="contact"
     >
-      <div class="my-auto">
+      <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Contact Me</h2>
 
         <div class="cardWrap d-flex">

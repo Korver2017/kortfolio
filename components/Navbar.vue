@@ -20,6 +20,7 @@
           </span>
         </nuxt-link>
         <button
+          @click="toggleCollapse"
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
@@ -30,7 +31,11 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          class="navbar-collapse"
+          :class="{ collapse: isCollapsed }"
+          id="navbarSupportedContent"
+        >
           <ul class="navbar-nav">
             <li class="nav-item">
               <nuxt-link class="nav-link" to="/">Home</nuxt-link>
@@ -72,6 +77,7 @@ export default {
   data() {
     return {
       isNavShown: false,
+      isCollapsed: true,
     }
   },
   computed: {
@@ -89,6 +95,9 @@ export default {
     toggleDarkMode() {
       this.$store.dispatch('toggleDarkMode')
     },
+    toggleCollapse() {
+      this.isCollapsed = !this.isCollapsed
+    },
   },
 }
 </script>
@@ -97,6 +106,14 @@ export default {
 .navbar-dark {
   .nuxt-link-exact-active {
     color: rgba(255, 255, 255, 0.75);
+  }
+}
+@media screen and (max-width: 991px) {
+  #sideNav {
+    left: 0;
+    .navbar-brand {
+      margin-right: 0;
+    }
   }
 }
 </style>

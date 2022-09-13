@@ -1,14 +1,14 @@
 <template>
   <Transition>
     <!-- Main content -->
-    <div class="main container-fluid ml-5 p-0">
+    <div class="main container-fluid ml-3 p-0">
       <!-- Home section -->
       <section
         :class="{ display: isTriggered }"
         class="resume-section p-3 p-lg-5 d-flex d-column"
         id="home"
       >
-        <div class="my-auto">
+        <div class="my-auto mx-2">
           <h1
             class="mb-0"
             :class="{ 'animate__animated animate__jackInTheBox': isTriggered }"

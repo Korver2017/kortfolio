@@ -1,18 +1,18 @@
 <template>
   <!-- Main content -->
-  <div class="main container-fluid ml-5 p-0">
+  <div class="main container-fluid ml-3 p-0">
     <!-- Works collection -->
     <section
       class="resume-section p-3 p-lg-5 d-flex flex-column"
       :class="{ display: isTriggered }"
       id="collection"
     >
-      <div class="my-auto">
+      <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Works Collection</h2>
         <div class="cardWrap d-flex flex-row">
-          <div class="card col-lg-3 col-12">
+          <div class="card">
             <img
-              class="card-img-top mt-2"
+              class="card-img-top"
               src="@/assets/images/konstructor.png"
               alt="Card image cap"
             />
@@ -38,9 +38,9 @@
               >
             </div>
           </div>
-          <div class="card col-lg-3 col-12">
+          <div class="card">
             <img
-              class="card-img-top mt-2"
+              class="card-img-top"
               src="@/assets/images/portfolio.png"
               alt="Card image cap"
             />
