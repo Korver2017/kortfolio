@@ -10,30 +10,30 @@
       <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Skills</h2>
 
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <div class="subheading mb-3">Programming Skills, Tools, and Others</div>
 
         <!-- Skill icons -->
-        <div class="icons-group my-4">
-          <span class="iconify" data-icon="logos:vue" />
-          <span class="iconify" data-icon="logos:vitejs" />
-          <span class="iconify" data-icon="logos:nuxt-icon" />
+        <div class="icons-group">
+          <span class="iconify my-3" data-icon="logos:vue" />
+          <span class="iconify my-3" data-icon="logos:vitejs" />
+          <span class="iconify my-3" data-icon="logos:nuxt-icon" />
+          <span class="iconify my-3" data-icon="logos:javascript"></span>
         </div>
 
-        <div class="icons-group my-4">
-          <span class="iconify my-2" data-icon="logos:javascript"></span>
-          <span class="iconify my-2" data-icon="logos:sass"></span>
-          <span class="iconify my-2" data-icon="logos:bootstrap"></span>
-          <span class="iconify my-2" data-icon="logos:html-5"></span>
-          <span class="iconify my-2" data-icon="logos:css-3"></span>
+        <div class="icons-group">
+          <span class="iconify my-3" data-icon="logos:sass"></span>
+          <span class="iconify my-3" data-icon="logos:bootstrap"></span>
+          <span class="iconify my-3" data-icon="logos:html-5"></span>
+          <span class="iconify my-3" data-icon="logos:css-3"></span>
         </div>
 
-        <div class="icons-group my-4">
-          <span class="iconify my-2" data-icon="logos:git-icon"></span>
-          <span class="iconify my-2" data-icon="logos:github-icon"></span>
-          <span class="iconify my-2" data-icon="logos:gitlab"></span>
-          <span class="iconify my-2" data-icon="logos:sourcetree"></span>
-          <span class="iconify my-2" data-icon="logos:gulp"></span>
-          <span class="iconify my-2" data-icon="logos:slack-icon"></span>
+        <div class="icons-group">
+          <span class="iconify my-3" data-icon="logos:git-icon"></span>
+          <span class="iconify my-3" data-icon="logos:github-icon"></span>
+          <span class="iconify my-3" data-icon="logos:gitlab"></span>
+          <span class="iconify my-3" data-icon="logos:sourcetree"></span>
+          <span class="iconify my-3" data-icon="logos:gulp"></span>
+          <span class="iconify my-3" data-icon="logos:slack-icon"></span>
         </div>
       </div>
     </section>
