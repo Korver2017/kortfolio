@@ -51,10 +51,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .iconify {
   font-size: 3.3rem;
   margin-right: 8px;
   margin-left: 8px;
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 </style>

@@ -87,18 +87,20 @@ body.dark-mode {
       }
     }
   }
-  #contact {
+  #contact .card-wrap {
     .name-card {
       background: #252423;
+      transition: transform .6s ease, box-shadow .6s ease;
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, .1);
+      }
       .info {
         h4 {
           color: #95A1A8;
         }
         p {
           color: #95A1A8;
-        }
-        &:hover {
-          box-shadow: 0 30px 70px rgba(145, 145, 145, .3);
         }
         .github:hover {
           border: 1px solid #95A1A8;
@@ -224,7 +226,6 @@ h3 {
 #home {
   .email {
     font-size: 1.5rem;
-    // opacity: 0;
   }
   .education {
     margin-bottom: 2rem;
@@ -253,15 +254,11 @@ h3 {
     ul li {
       font-size: 1.2rem;
     }
-    .intro-group {
-      // opacity: 0;
-    }
   }
 }
 #skills {
   .dev-icons {
     font-size: 4rem;
-    // opacity: 0;
     transition: opacity .5s;
   }
 }
@@ -282,7 +279,6 @@ h3 {
       margin-right: 30px;
       transition: opacity .5s;
       @media screen and (max-width: 991px) {
-        // margin-top: 30px;
         &:first-child {
           margin-bottom: 30px;
         }
@@ -290,23 +286,21 @@ h3 {
     }
   }
 }
-#contact .cardWrap {
+#contact .card-wrap {
   justify-content: center;
-  // opacity: 0;
   transition: opacity .5s;
   @media screen and (max-width: 991px) {
-    // flex-wrap: wrap;
   }
   .name-card {
     letter-spacing: 2px;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .1);
+    box-shadow: 0 0px 5px rgba(0, 0, 0, .1);
     border-radius: 10px;
-    transition: 0.5s;
+    transition: transform .6s ease, box-shadow .6s ease;
     &:hover {
-      transform: translateY(-30px) scale(1.01);
-      box-shadow: 0 30px 70px rgba(0, 0, 0, .2);
+      transform: translateY(-10px);
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
     }
     .info {
       text-align: center;

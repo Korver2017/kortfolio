@@ -10,7 +10,7 @@
       <div class="my-auto mx-2">
         <h2 class="text-primary mb-5">Contact Me</h2>
 
-        <div class="cardWrap d-flex">
+        <div class="card-wrap d-flex">
           <div class="name-card mt-2">
             <div class="info py-5 px-5">
               <div class="avatar mb-4"></div>
