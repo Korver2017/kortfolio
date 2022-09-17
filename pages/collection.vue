@@ -19,8 +19,8 @@
             <div class="card-body pb-0">
               <h4 class="card-title">Konstructor</h4>
               <p class="card-text">
-                Vue 3 / Pinia / Vue Router<br />
-                Vite / Bootstrap 5<br />
+                Vue 3 / Pinia / Vite / Vue Router<br />
+                Bootstrap 5<br />
               </p>
             </div>
             <div class="card-body pt-3 pb-4">
@@ -48,7 +48,7 @@
               <h4 class="card-title">Kortfolio</h4>
               <p class="card-text">
                 Nuxt / Vue<br />
-                Bootstrap / CSS Transition<br />
+                Bootstrap / CSS Animation<br />
               </p>
             </div>
             <div class="card-body pt-3 pb-4">
@@ -69,6 +69,9 @@
 <script>
 export default {
   name: 'collection',
+  head: {
+    title: 'Collection',
+  },
   data() {
     return {}
   },

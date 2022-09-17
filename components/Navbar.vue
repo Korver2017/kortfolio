@@ -74,15 +74,26 @@
 <script>
 export default {
   name: 'navbar',
+  props: {
+    menuCollapsed: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     return {
       isNavShown: false,
-      isCollapsed: true,
+      isCollapsed: this.menuCollapsed,
     }
   },
   computed: {
     isDarkMode() {
       return this.$store.getters.isDarkMode
+    },
+  },
+  watch: {
+    menuCollapsed(newVal) {
+      this.isCollapsed = newVal
     },
   },
   mounted() {
@@ -97,6 +108,7 @@ export default {
     },
     toggleCollapse() {
       this.isCollapsed = !this.isCollapsed
+      this.$emit('toggleCollapse', this.isCollapsed)
     },
   },
 }

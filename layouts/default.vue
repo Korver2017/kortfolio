@@ -1,6 +1,10 @@
 <template>
-  <div>
-    <Navbar />
+  <div @click="collapseMenu($event)">
+    <Navbar
+      ref="navbar"
+      :menuCollapsed="menuCollapsed"
+      @toggleCollapse="handleToggleCollapse"
+    />
     <Nuxt />
   </div>
 </template>
@@ -15,7 +19,9 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      menuCollapsed: true,
+    }
   },
   computed: {
     isDarkMode() {
@@ -23,7 +29,17 @@ export default {
     },
   },
   mounted() {},
-  methods: {},
+  methods: {
+    collapseMenu($event) {
+      const navbar = this.$refs.navbar.$el
+      if (navbar.contains($event.target)) return
+
+      this.menuCollapsed = true
+    },
+    handleToggleCollapse(isCollapsed) {
+      this.menuCollapsed = isCollapsed
+    },
+  },
 }
 </script>
 

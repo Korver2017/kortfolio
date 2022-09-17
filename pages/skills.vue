@@ -20,20 +20,20 @@
         </div>
 
         <div class="icons-group my-4">
-          <span class="iconify" data-icon="logos:javascript"></span>
-          <span class="iconify" data-icon="logos:sass"></span>
-          <span class="iconify" data-icon="logos:bootstrap"></span>
-          <span class="iconify" data-icon="logos:html-5"></span>
-          <span class="iconify" data-icon="logos:css-3"></span>
+          <span class="iconify my-2" data-icon="logos:javascript"></span>
+          <span class="iconify my-2" data-icon="logos:sass"></span>
+          <span class="iconify my-2" data-icon="logos:bootstrap"></span>
+          <span class="iconify my-2" data-icon="logos:html-5"></span>
+          <span class="iconify my-2" data-icon="logos:css-3"></span>
         </div>
 
         <div class="icons-group my-4">
-          <span class="iconify" data-icon="logos:git-icon"></span>
-          <span class="iconify" data-icon="logos:github-icon"></span>
-          <span class="iconify" data-icon="logos:gitlab"></span>
-          <span class="iconify" data-icon="logos:sourcetree"></span>
-          <span class="iconify" data-icon="logos:gulp"></span>
-          <span class="iconify" data-icon="logos:slack-icon"></span>
+          <span class="iconify my-2" data-icon="logos:git-icon"></span>
+          <span class="iconify my-2" data-icon="logos:github-icon"></span>
+          <span class="iconify my-2" data-icon="logos:gitlab"></span>
+          <span class="iconify my-2" data-icon="logos:sourcetree"></span>
+          <span class="iconify my-2" data-icon="logos:gulp"></span>
+          <span class="iconify my-2" data-icon="logos:slack-icon"></span>
         </div>
       </div>
     </section>
@@ -43,6 +43,9 @@
 <script>
 export default {
   name: 'skills',
+  head: {
+    title: 'Skills',
+  },
   computed: {
     isTriggered() {
       return this.$store.getters.isTriggered
@@ -51,10 +54,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .iconify {
   font-size: 3.3rem;
   margin-right: 8px;
   margin-left: 8px;
+  &:hover {
+    transform: translateY(-5px);
+  }
 }
 </style>

@@ -13,7 +13,7 @@ const routerBase =
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Kortfolio',
+    title: 'Kortfolio | A Portfolio about Korver',
     htmlAttrs: {
       lang: 'en',
     },
