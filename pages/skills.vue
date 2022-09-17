@@ -43,6 +43,9 @@
 <script>
 export default {
   name: 'skills',
+  head: {
+    title: 'Skills',
+  },
   computed: {
     isTriggered() {
       return this.$store.getters.isTriggered

@@ -69,6 +69,9 @@
 <script>
 export default {
   name: 'collection',
+  head: {
+    title: 'Collection',
+  },
   data() {
     return {}
   },
