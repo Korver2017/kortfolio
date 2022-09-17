@@ -43,6 +43,9 @@
 <script>
 export default {
   name: 'contact',
+  head: {
+    title: 'Contact',
+  },
   data() {
     return {}
   },

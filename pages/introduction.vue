@@ -84,6 +84,9 @@
 
 <script>
 export default {
+  head: {
+    title: 'Introduction',
+  },
   data() {
     return {}
   },
