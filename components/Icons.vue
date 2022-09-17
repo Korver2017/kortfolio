@@ -22,16 +22,19 @@ export default {
   data() {
     return {
       iconsGroups: [
-        ['vue', 'vitejs', 'nuxt-icon', 'javascript'],
+        ['vue', 'vitejs', 'nuxt-icon', 'javascript', 'promises'],
         ['sass', 'bootstrap', 'html-5', 'css-3'],
         [
           'git-icon',
           'github-icon',
           'gitlab',
           'sourcetree',
+          'webpack',
           'gulp',
-          'slack-icon',
+          'parcel-icon',
+          'postman-icon',
         ],
+        ['visual-studio-code', 'slack-icon'],
       ],
     }
   },
