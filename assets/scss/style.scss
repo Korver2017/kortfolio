@@ -276,7 +276,8 @@ h3 {
       flex-wrap: wrap;
     }
     .card {
-      margin-right: 30px;
+      height: 100%;
+      // margin-right: 30px;
       transition: opacity .5s;
       @media screen and (max-width: 991px) {
         &:first-child {

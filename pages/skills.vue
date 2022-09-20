@@ -1,43 +1,12 @@
 <template>
-  <!-- Main content -->
-  <div class="main container-fluid ml-3 p-0">
-    <!-- Skills section -->
-    <section
-      class="resume-section p-3 p-lg-5 d-flex flex-column"
-      :class="{ display: isTriggered }"
-      id="skills"
-    >
-      <div class="my-auto mx-2">
-        <h2 class="text-primary mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-
-        <!-- Skill icons -->
-        <div class="icons-group my-4">
-          <span class="iconify" data-icon="logos:vue" />
-          <span class="iconify" data-icon="logos:vitejs" />
-          <span class="iconify" data-icon="logos:nuxt-icon" />
-        </div>
-
-        <div class="icons-group my-4">
-          <span class="iconify my-2" data-icon="logos:javascript"></span>
-          <span class="iconify my-2" data-icon="logos:sass"></span>
-          <span class="iconify my-2" data-icon="logos:bootstrap"></span>
-          <span class="iconify my-2" data-icon="logos:html-5"></span>
-          <span class="iconify my-2" data-icon="logos:css-3"></span>
-        </div>
-
-        <div class="icons-group my-4">
-          <span class="iconify my-2" data-icon="logos:git-icon"></span>
-          <span class="iconify my-2" data-icon="logos:github-icon"></span>
-          <span class="iconify my-2" data-icon="logos:gitlab"></span>
-          <span class="iconify my-2" data-icon="logos:sourcetree"></span>
-          <span class="iconify my-2" data-icon="logos:gulp"></span>
-          <span class="iconify my-2" data-icon="logos:slack-icon"></span>
-        </div>
-      </div>
-    </section>
-  </div>
+  <Wrapper page="skills">
+    <div class="my-auto mx-2">
+      <h2 class="text-primary mb-5">Skills</h2>
+      <div class="subheading mb-3">Programming Skills, Tools, and Others</div>
+      <!-- Skill icons -->
+      <Icons />
+    </div>
+  </Wrapper>
 </template>
 
 <script>
@@ -46,21 +15,8 @@ export default {
   head: {
     title: 'Skills',
   },
-  computed: {
-    isTriggered() {
-      return this.$store.getters.isTriggered
-    },
-  },
+  computed: {},
 }
 </script>
 
-<style scoped lang="scss">
-.iconify {
-  font-size: 3.3rem;
-  margin-right: 8px;
-  margin-left: 8px;
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
-</style>
+<style scoped lang="scss"></style>
